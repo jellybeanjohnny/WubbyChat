@@ -11,13 +11,14 @@
 #import "JBJConstants.h"
 #import "JBJPubNubConnectionManager.h"
 #import "JBJChat.h"
+#import "PlistManager.h"
+
 
 @interface AppDelegate ()
 
 @end
 
 @implementation AppDelegate
-
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
   // Override point for customization after application launch.
@@ -26,8 +27,8 @@
   [JBJChat registerSubclass];
 
   // Registration info for Parse
-  [Parse setApplicationId:kParseApplicationIdKey
-                clientKey:kParseClientIdKey];
+  [Parse setApplicationId:plistDataForKey(@"ParseApplicationIdKey")
+                clientKey:plistDataForKey(@"ParseClientIdKey")];
   
   [[JBJPubNubConnectionManager sharedInstance] setup];
 
@@ -57,6 +58,7 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
   // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
 
 @end
 

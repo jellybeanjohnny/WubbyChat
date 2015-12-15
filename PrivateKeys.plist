@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<!--
-   PrivateKeys.plist
-   WubbyChat
-
-   Created by Matt Amerige on 12/14/15.
-   Copyright (c) 2015 Wubbyland. All rights reserved.
--->
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-    <dict>
-    
-    </dict>
+<dict>
+	<key>PubnubPublishKey</key>
+	<string>pub-c-56c0c957-29cf-4cb2-9ece-95f67edba416</string>
+	<key>PubnubSubscribeKey</key>
+	<string>sub-c-ca2390a6-9185-11e5-9a49-02ee2ddab7fe</string>
+	<key>ParseClientIdKey</key>
+	<string>rkvWk2baV6XxUUEmJWULwXxdEfxsYKS8aXM2N7nr</string>
+	<key>ParseApplicationIdKey</key>
+	<string>8YBkuXFVQTSB92yyZ1a7VJJO3jsv6IcgQzi91eJK</string>
+</dict>
 </plist>

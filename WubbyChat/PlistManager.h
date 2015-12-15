@@ -9,5 +9,9 @@
 #ifndef PlistManager_h
 #define PlistManager_h
 
+/**
+ @abstract Simple function to retrieve values from the PrivateKey plist
+ */
+NSString * plistDataForKey(NSString *key);
 
 #endif /* PlistManager_h */

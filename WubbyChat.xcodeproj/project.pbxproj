@@ -7,14 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C0A60FED63385FE74D85CB9D /* libPods-WubbyChat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 987DAF57F74AB888F36A9C83 /* libPods-WubbyChat.a */; };
+		C901E05F1C1FC4B0005396C5 /* PlistManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C901E05E1C1FC4B0005396C5 /* PlistManager.m */; };
 		C916B9751C1FB94F000E6303 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C916B9741C1FB94F000E6303 /* main.m */; };
-		C916B9781C1FB94F000E6303 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C916B9771C1FB94F000E6303 /* AppDelegate.m */; };
-		C916B97B1C1FB94F000E6303 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C916B97A1C1FB94F000E6303 /* ViewController.m */; };
-		C916B97E1C1FB94F000E6303 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C916B97C1C1FB94F000E6303 /* Main.storyboard */; };
 		C916B9801C1FB94F000E6303 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C916B97F1C1FB94F000E6303 /* Assets.xcassets */; };
 		C916B9831C1FB94F000E6303 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C916B9811C1FB94F000E6303 /* LaunchScreen.storyboard */; };
 		C916B98E1C1FB94F000E6303 /* WubbyChatTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C916B98D1C1FB94F000E6303 /* WubbyChatTests.m */; };
 		C916B9991C1FB94F000E6303 /* WubbyChatUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C916B9981C1FB94F000E6303 /* WubbyChatUITests.m */; };
+		C916B9A81C1FB9B9000E6303 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C916B9A71C1FB9B9000E6303 /* AppDelegate.m */; };
+		C916B9C01C1FB9D9000E6303 /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C916B9A91C1FB9D9000E6303 /* Chat.storyboard */; };
+		C916B9C11C1FB9D9000E6303 /* ChatListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C916B9AB1C1FB9D9000E6303 /* ChatListViewController.m */; };
+		C916B9C21C1FB9D9000E6303 /* ChatRoomTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C916B9AD1C1FB9D9000E6303 /* ChatRoomTableViewController.m */; };
+		C916B9C31C1FB9D9000E6303 /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C916B9AF1C1FB9D9000E6303 /* ChatViewController.m */; };
+		C916B9C41C1FB9D9000E6303 /* JBJChat.m in Sources */ = {isa = PBXBuildFile; fileRef = C916B9B11C1FB9D9000E6303 /* JBJChat.m */; };
+		C916B9C51C1FB9D9000E6303 /* JBJChatTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C916B9B31C1FB9D9000E6303 /* JBJChatTableViewCell.m */; };
+		C916B9C61C1FB9D9000E6303 /* JBJConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = C916B9B51C1FB9D9000E6303 /* JBJConstants.m */; };
+		C916B9C71C1FB9D9000E6303 /* JBJLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C916B9B71C1FB9D9000E6303 /* JBJLoginViewController.m */; };
+		C916B9C81C1FB9D9000E6303 /* JBJMessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C916B9B91C1FB9D9000E6303 /* JBJMessageTableViewCell.m */; };
+		C916B9C91C1FB9D9000E6303 /* JBJPubNubConnectionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C916B9BB1C1FB9D9000E6303 /* JBJPubNubConnectionManager.m */; };
+		C916B9CA1C1FB9D9000E6303 /* JoinChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C916B9BD1C1FB9D9000E6303 /* JoinChatViewController.m */; };
+		C916B9CB1C1FB9D9000E6303 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C916B9BE1C1FB9D9000E6303 /* Login.storyboard */; };
+		C916B9CC1C1FB9D9000E6303 /* NewChat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C916B9BF1C1FB9D9000E6303 /* NewChat.storyboard */; };
+		C916B9D51C1FBC3A000E6303 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C916B9D41C1FBC3A000E6303 /* Main.storyboard */; };
+		C916B9D71C1FBC88000E6303 /* PrivateKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = C916B9D61C1FBC88000E6303 /* PrivateKeys.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,13 +50,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		972FF2D8CECB730C1BDCA42A /* Pods-WubbyChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WubbyChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WubbyChat/Pods-WubbyChat.debug.xcconfig"; sourceTree = "<group>"; };
+		987DAF57F74AB888F36A9C83 /* libPods-WubbyChat.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WubbyChat.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C901E05D1C1FC475005396C5 /* PlistManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlistManager.h; sourceTree = "<group>"; };
+		C901E05E1C1FC4B0005396C5 /* PlistManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlistManager.m; sourceTree = "<group>"; };
 		C916B9701C1FB94F000E6303 /* WubbyChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WubbyChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C916B9741C1FB94F000E6303 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		C916B9761C1FB94F000E6303 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		C916B9771C1FB94F000E6303 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		C916B9791C1FB94F000E6303 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		C916B97A1C1FB94F000E6303 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		C916B97D1C1FB94F000E6303 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C916B97F1C1FB94F000E6303 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C916B9821C1FB94F000E6303 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C916B9841C1FB94F000E6303 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -51,6 +65,34 @@
 		C916B9941C1FB94F000E6303 /* WubbyChatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WubbyChatUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C916B9981C1FB94F000E6303 /* WubbyChatUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WubbyChatUITests.m; sourceTree = "<group>"; };
 		C916B99A1C1FB94F000E6303 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C916B9A61C1FB9B9000E6303 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C916B9A71C1FB9B9000E6303 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C916B9A91C1FB9D9000E6303 /* Chat.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
+		C916B9AA1C1FB9D9000E6303 /* ChatListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatListViewController.h; sourceTree = "<group>"; };
+		C916B9AB1C1FB9D9000E6303 /* ChatListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatListViewController.m; sourceTree = "<group>"; };
+		C916B9AC1C1FB9D9000E6303 /* ChatRoomTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatRoomTableViewController.h; sourceTree = "<group>"; };
+		C916B9AD1C1FB9D9000E6303 /* ChatRoomTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatRoomTableViewController.m; sourceTree = "<group>"; };
+		C916B9AE1C1FB9D9000E6303 /* ChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatViewController.h; sourceTree = "<group>"; };
+		C916B9AF1C1FB9D9000E6303 /* ChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatViewController.m; sourceTree = "<group>"; };
+		C916B9B01C1FB9D9000E6303 /* JBJChat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBJChat.h; sourceTree = "<group>"; };
+		C916B9B11C1FB9D9000E6303 /* JBJChat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBJChat.m; sourceTree = "<group>"; };
+		C916B9B21C1FB9D9000E6303 /* JBJChatTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBJChatTableViewCell.h; sourceTree = "<group>"; };
+		C916B9B31C1FB9D9000E6303 /* JBJChatTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBJChatTableViewCell.m; sourceTree = "<group>"; };
+		C916B9B41C1FB9D9000E6303 /* JBJConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBJConstants.h; sourceTree = "<group>"; };
+		C916B9B51C1FB9D9000E6303 /* JBJConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBJConstants.m; sourceTree = "<group>"; };
+		C916B9B61C1FB9D9000E6303 /* JBJLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBJLoginViewController.h; sourceTree = "<group>"; };
+		C916B9B71C1FB9D9000E6303 /* JBJLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBJLoginViewController.m; sourceTree = "<group>"; };
+		C916B9B81C1FB9D9000E6303 /* JBJMessageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBJMessageTableViewCell.h; sourceTree = "<group>"; };
+		C916B9B91C1FB9D9000E6303 /* JBJMessageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBJMessageTableViewCell.m; sourceTree = "<group>"; };
+		C916B9BA1C1FB9D9000E6303 /* JBJPubNubConnectionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBJPubNubConnectionManager.h; sourceTree = "<group>"; };
+		C916B9BB1C1FB9D9000E6303 /* JBJPubNubConnectionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBJPubNubConnectionManager.m; sourceTree = "<group>"; };
+		C916B9BC1C1FB9D9000E6303 /* JoinChatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JoinChatViewController.h; sourceTree = "<group>"; };
+		C916B9BD1C1FB9D9000E6303 /* JoinChatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JoinChatViewController.m; sourceTree = "<group>"; };
+		C916B9BE1C1FB9D9000E6303 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		C916B9BF1C1FB9D9000E6303 /* NewChat.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NewChat.storyboard; sourceTree = "<group>"; };
+		C916B9D41C1FBC3A000E6303 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		C916B9D61C1FBC88000E6303 /* PrivateKeys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivateKeys.plist; path = ../PrivateKeys.plist; sourceTree = "<group>"; };
+		D5E427C14D03855EEDF062A0 /* Pods-WubbyChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WubbyChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-WubbyChat/Pods-WubbyChat.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0A60FED63385FE74D85CB9D /* libPods-WubbyChat.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +121,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5CAB0EFC66047DC345CF8417 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				987DAF57F74AB888F36A9C83 /* libPods-WubbyChat.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C916B9671C1FB94F000E6303 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +136,8 @@
 				C916B98C1C1FB94F000E6303 /* WubbyChatTests */,
 				C916B9971C1FB94F000E6303 /* WubbyChatUITests */,
 				C916B9711C1FB94F000E6303 /* Products */,
+				FA8A5C2020D8CBB92A1D3D7C /* Pods */,
+				5CAB0EFC66047DC345CF8417 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,14 +154,13 @@
 		C916B9721C1FB94F000E6303 /* WubbyChat */ = {
 			isa = PBXGroup;
 			children = (
-				C916B9761C1FB94F000E6303 /* AppDelegate.h */,
-				C916B9771C1FB94F000E6303 /* AppDelegate.m */,
-				C916B9791C1FB94F000E6303 /* ViewController.h */,
-				C916B97A1C1FB94F000E6303 /* ViewController.m */,
-				C916B97C1C1FB94F000E6303 /* Main.storyboard */,
+				C916B9CD1C1FBAFC000E6303 /* App Delegate */,
+				C916B9D11C1FBB16000E6303 /* Storyboards & Launch Screen */,
+				C916B9CE1C1FBB03000E6303 /* Model */,
+				C916B9CF1C1FBB09000E6303 /* View */,
+				C916B9D01C1FBB0E000E6303 /* Controller */,
 				C916B97F1C1FB94F000E6303 /* Assets.xcassets */,
-				C916B9811C1FB94F000E6303 /* LaunchScreen.storyboard */,
-				C916B9841C1FB94F000E6303 /* Info.plist */,
+				C92011611C1FC17100C1C031 /* Plist */,
 				C916B9731C1FB94F000E6303 /* Supporting Files */,
 			);
 			path = WubbyChat;
@@ -140,6 +192,104 @@
 			path = WubbyChatUITests;
 			sourceTree = "<group>";
 		};
+		C916B9CD1C1FBAFC000E6303 /* App Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				C916B9A61C1FB9B9000E6303 /* AppDelegate.h */,
+				C916B9A71C1FB9B9000E6303 /* AppDelegate.m */,
+			);
+			name = "App Delegate";
+			sourceTree = "<group>";
+		};
+		C916B9CE1C1FBB03000E6303 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C916B9B01C1FB9D9000E6303 /* JBJChat.h */,
+				C916B9B11C1FB9D9000E6303 /* JBJChat.m */,
+				C916B9B41C1FB9D9000E6303 /* JBJConstants.h */,
+				C916B9B51C1FB9D9000E6303 /* JBJConstants.m */,
+				C916B9BA1C1FB9D9000E6303 /* JBJPubNubConnectionManager.h */,
+				C916B9BB1C1FB9D9000E6303 /* JBJPubNubConnectionManager.m */,
+				C901E05D1C1FC475005396C5 /* PlistManager.h */,
+				C901E05E1C1FC4B0005396C5 /* PlistManager.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		C916B9CF1C1FBB09000E6303 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C916B9B21C1FB9D9000E6303 /* JBJChatTableViewCell.h */,
+				C916B9B31C1FB9D9000E6303 /* JBJChatTableViewCell.m */,
+				C916B9B81C1FB9D9000E6303 /* JBJMessageTableViewCell.h */,
+				C916B9B91C1FB9D9000E6303 /* JBJMessageTableViewCell.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		C916B9D01C1FBB0E000E6303 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C916B9D31C1FBB7D000E6303 /* Chat */,
+				C916B9D21C1FBB78000E6303 /* Login */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		C916B9D11C1FBB16000E6303 /* Storyboards & Launch Screen */ = {
+			isa = PBXGroup;
+			children = (
+				C916B9D41C1FBC3A000E6303 /* Main.storyboard */,
+				C916B9A91C1FB9D9000E6303 /* Chat.storyboard */,
+				C916B9BE1C1FB9D9000E6303 /* Login.storyboard */,
+				C916B9BF1C1FB9D9000E6303 /* NewChat.storyboard */,
+				C916B9811C1FB94F000E6303 /* LaunchScreen.storyboard */,
+			);
+			name = "Storyboards & Launch Screen";
+			sourceTree = "<group>";
+		};
+		C916B9D21C1FBB78000E6303 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				C916B9B61C1FB9D9000E6303 /* JBJLoginViewController.h */,
+				C916B9B71C1FB9D9000E6303 /* JBJLoginViewController.m */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		C916B9D31C1FBB7D000E6303 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				C916B9AA1C1FB9D9000E6303 /* ChatListViewController.h */,
+				C916B9AB1C1FB9D9000E6303 /* ChatListViewController.m */,
+				C916B9AC1C1FB9D9000E6303 /* ChatRoomTableViewController.h */,
+				C916B9AD1C1FB9D9000E6303 /* ChatRoomTableViewController.m */,
+				C916B9AE1C1FB9D9000E6303 /* ChatViewController.h */,
+				C916B9AF1C1FB9D9000E6303 /* ChatViewController.m */,
+				C916B9BC1C1FB9D9000E6303 /* JoinChatViewController.h */,
+				C916B9BD1C1FB9D9000E6303 /* JoinChatViewController.m */,
+			);
+			name = Chat;
+			sourceTree = "<group>";
+		};
+		C92011611C1FC17100C1C031 /* Plist */ = {
+			isa = PBXGroup;
+			children = (
+				C916B9D61C1FBC88000E6303 /* PrivateKeys.plist */,
+				C916B9841C1FB94F000E6303 /* Info.plist */,
+			);
+			name = Plist;
+			sourceTree = "<group>";
+		};
+		FA8A5C2020D8CBB92A1D3D7C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				972FF2D8CECB730C1BDCA42A /* Pods-WubbyChat.debug.xcconfig */,
+				D5E427C14D03855EEDF062A0 /* Pods-WubbyChat.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,9 +297,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C916B99D1C1FB94F000E6303 /* Build configuration list for PBXNativeTarget "WubbyChat" */;
 			buildPhases = (
+				43D0908559240E26CFB69B91 /* Check Pods Manifest.lock */,
 				C916B96C1C1FB94F000E6303 /* Sources */,
 				C916B96D1C1FB94F000E6303 /* Frameworks */,
 				C916B96E1C1FB94F000E6303 /* Resources */,
+				1D546F997FA31F57B315033E /* Embed Pods Frameworks */,
+				DC4463477E6DBCB84CE10CD8 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -243,9 +396,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C916B9CB1C1FB9D9000E6303 /* Login.storyboard in Resources */,
+				C916B9C01C1FB9D9000E6303 /* Chat.storyboard in Resources */,
+				C916B9D71C1FBC88000E6303 /* PrivateKeys.plist in Resources */,
 				C916B9831C1FB94F000E6303 /* LaunchScreen.storyboard in Resources */,
+				C916B9D51C1FBC3A000E6303 /* Main.storyboard in Resources */,
+				C916B9CC1C1FB9D9000E6303 /* NewChat.storyboard in Resources */,
 				C916B9801C1FB94F000E6303 /* Assets.xcassets in Resources */,
-				C916B97E1C1FB94F000E6303 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,14 +422,72 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1D546F997FA31F57B315033E /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WubbyChat/Pods-WubbyChat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		43D0908559240E26CFB69B91 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DC4463477E6DBCB84CE10CD8 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WubbyChat/Pods-WubbyChat-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C916B96C1C1FB94F000E6303 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C916B97B1C1FB94F000E6303 /* ViewController.m in Sources */,
-				C916B9781C1FB94F000E6303 /* AppDelegate.m in Sources */,
+				C916B9C21C1FB9D9000E6303 /* ChatRoomTableViewController.m in Sources */,
+				C916B9C11C1FB9D9000E6303 /* ChatListViewController.m in Sources */,
+				C916B9C41C1FB9D9000E6303 /* JBJChat.m in Sources */,
+				C916B9C51C1FB9D9000E6303 /* JBJChatTableViewCell.m in Sources */,
+				C901E05F1C1FC4B0005396C5 /* PlistManager.m in Sources */,
+				C916B9C61C1FB9D9000E6303 /* JBJConstants.m in Sources */,
+				C916B9C91C1FB9D9000E6303 /* JBJPubNubConnectionManager.m in Sources */,
+				C916B9C31C1FB9D9000E6303 /* ChatViewController.m in Sources */,
+				C916B9C81C1FB9D9000E6303 /* JBJMessageTableViewCell.m in Sources */,
+				C916B9A81C1FB9B9000E6303 /* AppDelegate.m in Sources */,
 				C916B9751C1FB94F000E6303 /* main.m in Sources */,
+				C916B9CA1C1FB9D9000E6303 /* JoinChatViewController.m in Sources */,
+				C916B9C71C1FB9D9000E6303 /* JBJLoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,14 +523,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		C916B97C1C1FB94F000E6303 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C916B97D1C1FB94F000E6303 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		C916B9811C1FB94F000E6303 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -411,6 +618,7 @@
 		};
 		C916B99E1C1FB94F000E6303 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 972FF2D8CECB730C1BDCA42A /* Pods-WubbyChat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = WubbyChat/Info.plist;
@@ -422,6 +630,7 @@
 		};
 		C916B99F1C1FB94F000E6303 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D5E427C14D03855EEDF062A0 /* Pods-WubbyChat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = WubbyChat/Info.plist;
@@ -498,6 +707,7 @@
 				C916B99F1C1FB94F000E6303 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C916B9A01C1FB94F000E6303 /* Build configuration list for PBXNativeTarget "WubbyChatTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +716,7 @@
 				C916B9A21C1FB94F000E6303 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C916B9A31C1FB94F000E6303 /* Build configuration list for PBXNativeTarget "WubbyChatUITests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +725,7 @@
 				C916B9A51C1FB94F000E6303 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

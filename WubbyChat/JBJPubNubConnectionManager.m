@@ -8,6 +8,7 @@
 
 #import "JBJPubNubConnectionManager.h"
 #import "JBJConstants.h"
+#import "PlistManager.h"
 
 @interface JBJPubNubConnectionManager() <PNObjectEventListener>
 {
@@ -17,6 +18,8 @@
 @end
 
 @implementation JBJPubNubConnectionManager
+
+
 @synthesize client = _client;
 @synthesize delegate = _delegate;
 
@@ -45,8 +48,8 @@
  */
 - (void)setup
 {
-  PNConfiguration *configuration = [PNConfiguration configurationWithPublishKey:kPubNubPublishKey
-                                                                   subscribeKey:kPubNubSubscribeKey];
+  PNConfiguration *configuration = [PNConfiguration configurationWithPublishKey:plistDataForKey(@"PubnubPublishKey")
+                                                                   subscribeKey:plistDataForKey(@"PubnubSubscribeKey")];
   
   _client = [PubNub clientWithConfiguration:configuration];
   [_client addListener:self];
@@ -88,10 +91,6 @@
     // encrypt messages and on live data feed it received plain text.
   }
 }
-
-
-
-
 
 
 @end

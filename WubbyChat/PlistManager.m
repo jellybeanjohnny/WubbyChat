@@ -7,3 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "PlistManager.h"
+
+NSString * plistDataForKey(NSString *key)
+{
+  NSDictionary *dictionary = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"PrivateKeys" ofType:@"plist"]];
+  return [dictionary objectForKey:key];
+}
