@@ -1,12 +1,16 @@
 //
 //  AppDelegate.m
-//  WubbyChat
+//  TestChat
 //
-//  Created by Matt Amerige on 12/14/15.
+//  Created by Matt Amerige on 10/17/15.
 //  Copyright © 2015 Wubbyland. All rights reserved.
 //
 
 #import "AppDelegate.h"
+#import <Parse/Parse.h>
+#import "JBJConstants.h"
+#import "JBJPubNubConnectionManager.h"
+#import "JBJChat.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +21,18 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
   // Override point for customization after application launch.
+  
+  // Setting up JBJChat as an custom subclass of PFObject
+  [JBJChat registerSubclass];
+
+  // Registration info for Parse
+  [Parse setApplicationId:kParseApplicationIdKey
+                clientKey:kParseClientIdKey];
+  
+  [[JBJPubNubConnectionManager sharedInstance] setup];
+
+  
+  
   return YES;
 }
 
@@ -43,3 +59,30 @@
 }
 
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

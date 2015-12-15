@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  ChatViewController.h
 //  TestChat
 //
 //  Created by Matt Amerige on 10/17/15.
@@ -8,10 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface ChatViewController : UIViewController
 
-@property (strong, nonatomic) UIWindow *window;
-
+@property (nonatomic, strong) NSString *channel;
 
 @end
-
