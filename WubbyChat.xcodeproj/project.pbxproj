@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		C0A60FED63385FE74D85CB9D /* libPods-WubbyChat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 987DAF57F74AB888F36A9C83 /* libPods-WubbyChat.a */; };
 		C901E05F1C1FC4B0005396C5 /* PlistManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C901E05E1C1FC4B0005396C5 /* PlistManager.m */; };
+		C901E0611C1FCAA3005396C5 /* PrivateKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = C901E0601C1FCAA3005396C5 /* PrivateKeys.plist */; };
 		C916B9751C1FB94F000E6303 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C916B9741C1FB94F000E6303 /* main.m */; };
 		C916B9801C1FB94F000E6303 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C916B97F1C1FB94F000E6303 /* Assets.xcassets */; };
 		C916B9831C1FB94F000E6303 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C916B9811C1FB94F000E6303 /* LaunchScreen.storyboard */; };
@@ -29,7 +30,6 @@
 		C916B9CB1C1FB9D9000E6303 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C916B9BE1C1FB9D9000E6303 /* Login.storyboard */; };
 		C916B9CC1C1FB9D9000E6303 /* NewChat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C916B9BF1C1FB9D9000E6303 /* NewChat.storyboard */; };
 		C916B9D51C1FBC3A000E6303 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C916B9D41C1FBC3A000E6303 /* Main.storyboard */; };
-		C916B9D71C1FBC88000E6303 /* PrivateKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = C916B9D61C1FBC88000E6303 /* PrivateKeys.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +54,7 @@
 		987DAF57F74AB888F36A9C83 /* libPods-WubbyChat.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WubbyChat.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C901E05D1C1FC475005396C5 /* PlistManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlistManager.h; sourceTree = "<group>"; };
 		C901E05E1C1FC4B0005396C5 /* PlistManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlistManager.m; sourceTree = "<group>"; };
+		C901E0601C1FCAA3005396C5 /* PrivateKeys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PrivateKeys.plist; sourceTree = "<group>"; };
 		C916B9701C1FB94F000E6303 /* WubbyChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WubbyChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C916B9741C1FB94F000E6303 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C916B97F1C1FB94F000E6303 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -91,7 +92,6 @@
 		C916B9BE1C1FB9D9000E6303 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		C916B9BF1C1FB9D9000E6303 /* NewChat.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NewChat.storyboard; sourceTree = "<group>"; };
 		C916B9D41C1FBC3A000E6303 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		C916B9D61C1FBC88000E6303 /* PrivateKeys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivateKeys.plist; path = ../PrivateKeys.plist; sourceTree = "<group>"; };
 		D5E427C14D03855EEDF062A0 /* Pods-WubbyChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WubbyChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-WubbyChat/Pods-WubbyChat.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -275,7 +275,7 @@
 		C92011611C1FC17100C1C031 /* Plist */ = {
 			isa = PBXGroup;
 			children = (
-				C916B9D61C1FBC88000E6303 /* PrivateKeys.plist */,
+				C901E0601C1FCAA3005396C5 /* PrivateKeys.plist */,
 				C916B9841C1FB94F000E6303 /* Info.plist */,
 			);
 			name = Plist;
@@ -398,7 +398,7 @@
 			files = (
 				C916B9CB1C1FB9D9000E6303 /* Login.storyboard in Resources */,
 				C916B9C01C1FB9D9000E6303 /* Chat.storyboard in Resources */,
-				C916B9D71C1FBC88000E6303 /* PrivateKeys.plist in Resources */,
+				C901E0611C1FCAA3005396C5 /* PrivateKeys.plist in Resources */,
 				C916B9831C1FB94F000E6303 /* LaunchScreen.storyboard in Resources */,
 				C916B9D51C1FBC3A000E6303 /* Main.storyboard in Resources */,
 				C916B9CC1C1FB9D9000E6303 /* NewChat.storyboard in Resources */,
