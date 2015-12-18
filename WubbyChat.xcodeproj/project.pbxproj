@@ -30,6 +30,7 @@
 		C916B9CB1C1FB9D9000E6303 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C916B9BE1C1FB9D9000E6303 /* Login.storyboard */; };
 		C916B9CC1C1FB9D9000E6303 /* NewChat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C916B9BF1C1FB9D9000E6303 /* NewChat.storyboard */; };
 		C916B9D51C1FBC3A000E6303 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C916B9D41C1FBC3A000E6303 /* Main.storyboard */; };
+		C91A37D81C23A1B700828BC6 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91A37D71C23A1B700828BC6 /* SignUpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +93,18 @@
 		C916B9BE1C1FB9D9000E6303 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		C916B9BF1C1FB9D9000E6303 /* NewChat.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NewChat.storyboard; sourceTree = "<group>"; };
 		C916B9D41C1FBC3A000E6303 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		C91A37D61C23A1B700828BC6 /* WubbyChat-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WubbyChat-Bridging-Header.h"; sourceTree = "<group>"; };
+		C91A37D71C23A1B700828BC6 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		C91A37D91C23A64B00828BC6 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		C91A37DB1C23A66300828BC6 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		C91A37DD1C23A66C00828BC6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		C91A37DF1C23A67400828BC6 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		C91A37E11C23A67C00828BC6 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		C91A37E31C23A68400828BC6 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		C91A37E51C23A68B00828BC6 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		C91A37E71C23A69F00828BC6 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		C91A37E91C23A6AD00828BC6 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		C91A37EB1C23A6B900828BC6 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		D5E427C14D03855EEDF062A0 /* Pods-WubbyChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WubbyChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-WubbyChat/Pods-WubbyChat.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -124,6 +137,16 @@
 		5CAB0EFC66047DC345CF8417 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C91A37EB1C23A6B900828BC6 /* libsqlite3.tbd */,
+				C91A37E91C23A6AD00828BC6 /* libz.tbd */,
+				C91A37E71C23A69F00828BC6 /* SystemConfiguration.framework */,
+				C91A37E51C23A68B00828BC6 /* StoreKit.framework */,
+				C91A37E31C23A68400828BC6 /* Security.framework */,
+				C91A37E11C23A67C00828BC6 /* QuartzCore.framework */,
+				C91A37DF1C23A67400828BC6 /* CoreLocation.framework */,
+				C91A37DD1C23A66C00828BC6 /* CoreGraphics.framework */,
+				C91A37DB1C23A66300828BC6 /* CFNetwork.framework */,
+				C91A37D91C23A64B00828BC6 /* AudioToolbox.framework */,
 				987DAF57F74AB888F36A9C83 /* libPods-WubbyChat.a */,
 			);
 			name = Frameworks;
@@ -169,6 +192,7 @@
 		C916B9731C1FB94F000E6303 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C91A37D61C23A1B700828BC6 /* WubbyChat-Bridging-Header.h */,
 				C916B9741C1FB94F000E6303 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -231,7 +255,7 @@
 			isa = PBXGroup;
 			children = (
 				C916B9D31C1FBB7D000E6303 /* Chat */,
-				C916B9D21C1FBB78000E6303 /* Login */,
+				C916B9D21C1FBB78000E6303 /* Login & Signup */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -248,13 +272,14 @@
 			name = "Storyboards & Launch Screen";
 			sourceTree = "<group>";
 		};
-		C916B9D21C1FBB78000E6303 /* Login */ = {
+		C916B9D21C1FBB78000E6303 /* Login & Signup */ = {
 			isa = PBXGroup;
 			children = (
 				C916B9B61C1FB9D9000E6303 /* JBJLoginViewController.h */,
 				C916B9B71C1FB9D9000E6303 /* JBJLoginViewController.m */,
+				C91A37D71C23A1B700828BC6 /* SignUpViewController.swift */,
 			);
-			name = Login;
+			name = "Login & Signup";
 			sourceTree = "<group>";
 		};
 		C916B9D31C1FBB7D000E6303 /* Chat */ = {
@@ -300,8 +325,8 @@
 				43D0908559240E26CFB69B91 /* Check Pods Manifest.lock */,
 				C916B96C1C1FB94F000E6303 /* Sources */,
 				C916B96D1C1FB94F000E6303 /* Frameworks */,
-				C916B96E1C1FB94F000E6303 /* Resources */,
 				1D546F997FA31F57B315033E /* Embed Pods Frameworks */,
+				C916B96E1C1FB94F000E6303 /* Resources */,
 				DC4463477E6DBCB84CE10CD8 /* Copy Pods Resources */,
 			);
 			buildRules = (
@@ -483,6 +508,7 @@
 				C916B9C61C1FB9D9000E6303 /* JBJConstants.m in Sources */,
 				C916B9C91C1FB9D9000E6303 /* JBJPubNubConnectionManager.m in Sources */,
 				C916B9C31C1FB9D9000E6303 /* ChatViewController.m in Sources */,
+				C91A37D81C23A1B700828BC6 /* SignUpViewController.swift in Sources */,
 				C916B9C81C1FB9D9000E6303 /* JBJMessageTableViewCell.m in Sources */,
 				C916B9A81C1FB9B9000E6303 /* AppDelegate.m in Sources */,
 				C916B9751C1FB94F000E6303 /* main.m in Sources */,
@@ -621,10 +647,13 @@
 			baseConfigurationReference = 972FF2D8CECB730C1BDCA42A /* Pods-WubbyChat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = WubbyChat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Wubbyland.WubbyChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WubbyChat/WubbyChat-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -633,10 +662,12 @@
 			baseConfigurationReference = D5E427C14D03855EEDF062A0 /* Pods-WubbyChat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = WubbyChat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Wubbyland.WubbyChat;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WubbyChat/WubbyChat-Bridging-Header.h";
 			};
 			name = Release;
 		};
