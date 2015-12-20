@@ -58,9 +58,8 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
         print("Error signing in user. Here are the details: \(errorString)")
       } else {
         print("Success! User \(newUser.username!) is successfully saved to Parse")
-        //TODO: This isn't working as expected. I want this view controller (sign up) and the presenting View controller
-        // to be dismissed. The next screen the user sees should be the main tableViewController for the app.
-        self.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
+        // Unwind back to the ChatListViewController
+        self.performSegueWithIdentifier("unwindToChatList", sender: nil);
       }
     }
   }
@@ -80,6 +79,18 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     }
     return false
   }
-  
-
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

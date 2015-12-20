@@ -127,9 +127,11 @@
                         <outlet property="_displayNameTextField" destination="jwB-PJ-Nvn" id="dVF-Nm-jE5"/>
                         <outlet property="_emailTextField" destination="B9k-QW-UNp" id="fLR-UT-vbT"/>
                         <outlet property="_passwordTextField" destination="Q8q-5j-GiO" id="Vqe-Iw-vjr"/>
+                        <segue destination="lMk-Vb-OUh" kind="unwind" identifier="unwindToChatList" unwindAction="_unwindToChatList:" id="Tom-o3-f1h"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qtY-ah-lK9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="lMk-Vb-OUh" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1114" y="205"/>
         </scene>
