@@ -9,5 +9,9 @@
 import UIKit
 
 class DevOptionsViewController: UIViewController {
+  
+  @IBAction func _logout(sender: AnyObject) {
+    PFUser.logOut()
+  }
 
 }
