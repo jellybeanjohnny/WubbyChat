@@ -26,24 +26,6 @@
    // Do any additional setup after loading the view.
 }
 
-- (IBAction)_signup:(id)sender
-{
-  PFUser *newUser = [PFUser user];
-  newUser.username = _usernameTextField.text;
-  newUser.password = _passwordTextField.text;
-  
-  [newUser signUpInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
-    if (!error) {
-      NSLog(@"Sucessfully signed up");
-      // Okay to proceed to the main section of the app
-      [self dismissViewControllerAnimated:YES completion:nil];
-    }
-    else {
-      NSLog(@"Error signing up: %@", error);
-    }
-  }];
-}
-
 - (IBAction)_login:(id)sender
 {
   [PFUser logInWithUsernameInBackground:_usernameTextField.text password:_passwordTextField.text block:^(PFUser * _Nullable user, NSError * _Nullable error) {

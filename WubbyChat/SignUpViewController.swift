@@ -38,7 +38,7 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
     This will probably have to change to be more thorough, but for now these simple
     tests will suffice
     */
-    
+    //WARNING: add better checks here
     if (_emailTextField.text == "" || _displayNameTextField.text == "" || _passwordTextField.text == "") {
       print("One or more of the entered data is blank!")
       return
@@ -65,7 +65,6 @@ class SignUpViewController: UIViewController, UITextFieldDelegate {
   }
   
   //MARK: - UITextFieldDelegate
-  
   func textFieldShouldReturn(textField: UITextField) -> Bool {
     if textField == _emailTextField {
       // Move the first responder
