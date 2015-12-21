@@ -31,6 +31,7 @@
 		C916B9CC1C1FB9D9000E6303 /* NewChat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C916B9BF1C1FB9D9000E6303 /* NewChat.storyboard */; };
 		C916B9D51C1FBC3A000E6303 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C916B9D41C1FBC3A000E6303 /* Main.storyboard */; };
 		C91A37D81C23A1B700828BC6 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91A37D71C23A1B700828BC6 /* SignUpViewController.swift */; };
+		C93955B51C279B020088B9A6 /* DevOptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93955B41C279B020088B9A6 /* DevOptionsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +106,7 @@
 		C91A37E71C23A69F00828BC6 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		C91A37E91C23A6AD00828BC6 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		C91A37EB1C23A6B900828BC6 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		C93955B41C279B020088B9A6 /* DevOptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DevOptionsViewController.swift; sourceTree = "<group>"; };
 		D5E427C14D03855EEDF062A0 /* Pods-WubbyChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WubbyChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-WubbyChat/Pods-WubbyChat.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -256,6 +258,7 @@
 			children = (
 				C916B9D31C1FBB7D000E6303 /* Chat */,
 				C916B9D21C1FBB78000E6303 /* Login & Signup */,
+				C93955B61C279BB70088B9A6 /* DevOptions */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -304,6 +307,14 @@
 				C916B9841C1FB94F000E6303 /* Info.plist */,
 			);
 			name = Plist;
+			sourceTree = "<group>";
+		};
+		C93955B61C279BB70088B9A6 /* DevOptions */ = {
+			isa = PBXGroup;
+			children = (
+				C93955B41C279B020088B9A6 /* DevOptionsViewController.swift */,
+			);
+			name = DevOptions;
 			sourceTree = "<group>";
 		};
 		FA8A5C2020D8CBB92A1D3D7C /* Pods */ = {
@@ -505,6 +516,7 @@
 				C916B9C41C1FB9D9000E6303 /* JBJChat.m in Sources */,
 				C916B9C51C1FB9D9000E6303 /* JBJChatTableViewCell.m in Sources */,
 				C901E05F1C1FC4B0005396C5 /* PlistManager.m in Sources */,
+				C93955B51C279B020088B9A6 /* DevOptionsViewController.swift in Sources */,
 				C916B9C61C1FB9D9000E6303 /* JBJConstants.m in Sources */,
 				C916B9C91C1FB9D9000E6303 /* JBJPubNubConnectionManager.m in Sources */,
 				C916B9C31C1FB9D9000E6303 /* ChatViewController.m in Sources */,

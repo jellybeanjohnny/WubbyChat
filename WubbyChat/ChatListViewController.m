@@ -13,7 +13,7 @@
 #import "ChatViewController.h"
 #import "JBJChatTableViewCell.h"
 
-@interface ChatListViewController ()
+@interface ChatListViewController () <UIPopoverPresentationControllerDelegate>
 
 @end
 
@@ -83,6 +83,16 @@
       chatroom.channel = cell.channel;
     }
   }
+  if ([segue.identifier isEqualToString:@"ShowDevOptions"]) {
+    UIViewController *popoverViewController = segue.destinationViewController;
+    popoverViewController.modalPresentationStyle = UIModalPresentationPopover;
+    popoverViewController.popoverPresentationController.delegate = self;
+  }
+}
+
+- (UIModalPresentationStyle)adaptivePresentationStyleForPresentationController:(UIPresentationController *)controller
+{
+  return UIModalPresentationNone;
 }
 
 /**

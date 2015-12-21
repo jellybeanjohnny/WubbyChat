@@ -8,6 +8,7 @@
 
 #import "JBJLoginViewController.h"
 #import <Parse/Parse.h>
+#import <ParseFacebookUtilsV4/ParseFacebookUtilsV4.h>
 
 @interface JBJLoginViewController ()
 {
@@ -20,11 +21,6 @@
 
 @implementation JBJLoginViewController
 
-- (void)viewDidLoad
-{
-   [super viewDidLoad];
-   // Do any additional setup after loading the view.
-}
 
 - (IBAction)_login:(id)sender
 {
@@ -36,9 +32,26 @@
     else {
       NSLog(@"Error logging in.");
     }
+    
   }];
 }
 
+- (IBAction)_loginWithFacebook:(id)sender
+{
+  NSArray<NSString *> *permissions = @[@"public_profile", @"user_friends"];
+  
+  [PFFacebookUtils logInInBackgroundWithReadPermissions:permissions block:^(PFUser * _Nullable user, NSError * _Nullable error) {
+    if (!user) {
+      NSLog(@"User cancelled Facebook login");
+    }
+    else if (user.isNew) {
+      NSLog(@"New user sign up via Facebook");
+    }
+    else {
+      NSLog(@"User logged in through Facebook");
+    }
+  }];
+}
 
 
 

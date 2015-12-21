@@ -33,6 +33,7 @@
   [Parse setApplicationId:plistDataForKey(@"ParseApplicationIdKey")
                 clientKey:plistDataForKey(@"ParseClientIdKey")];
   
+  // Pubnub setup
   [[JBJPubNubConnectionManager sharedInstance] setup];
   
   // Setup Facebook through Parse

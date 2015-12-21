@@ -24,14 +24,14 @@
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5cN-lR-omm">
-                                <rect key="frame" x="276" y="261" width="48" height="30"/>
+                                <rect key="frame" x="276" y="461" width="48" height="30"/>
                                 <state key="normal" title="Signup"/>
                                 <connections>
                                     <segue destination="K3r-bC-TqP" kind="show" id="wuU-dB-MPK"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="psS-1g-PdN">
-                                <rect key="frame" x="281" y="321" width="38" height="30"/>
+                                <rect key="frame" x="281" y="239" width="38" height="30"/>
                                 <state key="normal" title="Login"/>
                                 <connections>
                                     <action selector="_login:" destination="7Vs-60-2fy" eventType="touchUpInside" id="eLK-mY-Hiu"/>
@@ -46,20 +46,29 @@
                                 <rect key="frame" x="239" y="499" width="123" height="30"/>
                                 <state key="normal" title="Forgot Password?"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BvP-lg-08H">
+                                <rect key="frame" x="230" y="277" width="141" height="30"/>
+                                <state key="normal" title="Login with Facebook"/>
+                                <connections>
+                                    <action selector="_loginWithFacebook:" destination="7Vs-60-2fy" eventType="touchUpInside" id="szU-xT-ubC"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="psS-1g-PdN" firstAttribute="centerX" secondItem="5cN-lR-omm" secondAttribute="centerX" id="DdS-kD-uGh"/>
+                            <constraint firstItem="mSp-fr-xtF" firstAttribute="top" secondItem="5cN-lR-omm" secondAttribute="bottom" constant="8" id="3wL-Oi-btd"/>
+                            <constraint firstItem="5cN-lR-omm" firstAttribute="centerX" secondItem="7vR-Lo-eht" secondAttribute="centerX" id="4IQ-Il-m26"/>
+                            <constraint firstItem="BvP-lg-08H" firstAttribute="centerX" secondItem="psS-1g-PdN" secondAttribute="centerX" id="Ifd-E0-JUc"/>
                             <constraint firstItem="GUD-2w-grk" firstAttribute="centerX" secondItem="7vR-Lo-eht" secondAttribute="centerX" id="Pj0-li-Pr0"/>
                             <constraint firstItem="v3R-HD-AKM" firstAttribute="width" secondItem="GUD-2w-grk" secondAttribute="width" id="Poq-fl-JPh"/>
                             <constraint firstAttribute="trailingMargin" secondItem="GUD-2w-grk" secondAttribute="trailing" id="SSl-1k-Azb"/>
                             <constraint firstItem="GUD-2w-grk" firstAttribute="top" secondItem="VZf-lW-BGy" secondAttribute="bottom" constant="89" id="YHa-ff-eb4"/>
                             <constraint firstItem="mSp-fr-xtF" firstAttribute="centerX" secondItem="7vR-Lo-eht" secondAttribute="centerX" id="bya-du-lOr"/>
-                            <constraint firstItem="5cN-lR-omm" firstAttribute="centerX" secondItem="v3R-HD-AKM" secondAttribute="centerX" id="ddj-Ln-2fB"/>
+                            <constraint firstItem="BvP-lg-08H" firstAttribute="top" secondItem="psS-1g-PdN" secondAttribute="bottom" constant="8" id="g06-l8-Pvi"/>
+                            <constraint firstItem="psS-1g-PdN" firstAttribute="top" secondItem="v3R-HD-AKM" secondAttribute="bottom" constant="46" id="hVf-K9-dIV"/>
                             <constraint firstAttribute="trailingMargin" secondItem="v3R-HD-AKM" secondAttribute="trailing" id="kyb-Qt-e5m"/>
                             <constraint firstItem="vv2-dd-Rl9" firstAttribute="top" secondItem="mSp-fr-xtF" secondAttribute="bottom" constant="71" id="pT6-Qh-rYq"/>
                             <constraint firstItem="v3R-HD-AKM" firstAttribute="top" secondItem="GUD-2w-grk" secondAttribute="bottom" constant="24" id="qfB-oK-nqD"/>
-                            <constraint firstItem="psS-1g-PdN" firstAttribute="top" secondItem="5cN-lR-omm" secondAttribute="bottom" constant="30" id="qun-Xo-ERX"/>
-                            <constraint firstItem="5cN-lR-omm" firstAttribute="top" secondItem="v3R-HD-AKM" secondAttribute="bottom" constant="68" id="y5c-lI-n5q"/>
+                            <constraint firstItem="psS-1g-PdN" firstAttribute="centerX" secondItem="7vR-Lo-eht" secondAttribute="centerX" id="svM-NC-fbX"/>
                         </constraints>
                     </view>
                     <connections>
