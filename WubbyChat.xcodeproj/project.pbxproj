@@ -32,6 +32,7 @@
 		C916B9D51C1FBC3A000E6303 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C916B9D41C1FBC3A000E6303 /* Main.storyboard */; };
 		C91A37D81C23A1B700828BC6 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91A37D71C23A1B700828BC6 /* SignUpViewController.swift */; };
 		C93955B51C279B020088B9A6 /* DevOptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93955B41C279B020088B9A6 /* DevOptionsViewController.swift */; };
+		C9701D4E1C28E3F700B86B0B /* NewChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9701D4D1C28E3F700B86B0B /* NewChatViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +108,7 @@
 		C91A37E91C23A6AD00828BC6 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		C91A37EB1C23A6B900828BC6 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		C93955B41C279B020088B9A6 /* DevOptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DevOptionsViewController.swift; sourceTree = "<group>"; };
+		C9701D4D1C28E3F700B86B0B /* NewChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewChatViewController.swift; sourceTree = "<group>"; };
 		D5E427C14D03855EEDF062A0 /* Pods-WubbyChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WubbyChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-WubbyChat/Pods-WubbyChat.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -288,12 +290,9 @@
 		C916B9D31C1FBB7D000E6303 /* Chat */ = {
 			isa = PBXGroup;
 			children = (
-				C916B9AA1C1FB9D9000E6303 /* ChatListViewController.h */,
-				C916B9AB1C1FB9D9000E6303 /* ChatListViewController.m */,
-				C916B9AC1C1FB9D9000E6303 /* ChatRoomTableViewController.h */,
-				C916B9AD1C1FB9D9000E6303 /* ChatRoomTableViewController.m */,
-				C916B9AE1C1FB9D9000E6303 /* ChatViewController.h */,
-				C916B9AF1C1FB9D9000E6303 /* ChatViewController.m */,
+				C9701D4C1C28E39B00B86B0B /* ChatRoom */,
+				C9701D4B1C28E39400B86B0B /* Chat List */,
+				C9701D4A1C28E38B00B86B0B /* New Chat */,
 				C916B9BC1C1FB9D9000E6303 /* JoinChatViewController.h */,
 				C916B9BD1C1FB9D9000E6303 /* JoinChatViewController.m */,
 			);
@@ -315,6 +314,34 @@
 				C93955B41C279B020088B9A6 /* DevOptionsViewController.swift */,
 			);
 			name = DevOptions;
+			sourceTree = "<group>";
+		};
+		C9701D4A1C28E38B00B86B0B /* New Chat */ = {
+			isa = PBXGroup;
+			children = (
+				C9701D4D1C28E3F700B86B0B /* NewChatViewController.swift */,
+			);
+			name = "New Chat";
+			sourceTree = "<group>";
+		};
+		C9701D4B1C28E39400B86B0B /* Chat List */ = {
+			isa = PBXGroup;
+			children = (
+				C916B9AA1C1FB9D9000E6303 /* ChatListViewController.h */,
+				C916B9AB1C1FB9D9000E6303 /* ChatListViewController.m */,
+			);
+			name = "Chat List";
+			sourceTree = "<group>";
+		};
+		C9701D4C1C28E39B00B86B0B /* ChatRoom */ = {
+			isa = PBXGroup;
+			children = (
+				C916B9AC1C1FB9D9000E6303 /* ChatRoomTableViewController.h */,
+				C916B9AD1C1FB9D9000E6303 /* ChatRoomTableViewController.m */,
+				C916B9AE1C1FB9D9000E6303 /* ChatViewController.h */,
+				C916B9AF1C1FB9D9000E6303 /* ChatViewController.m */,
+			);
+			name = ChatRoom;
 			sourceTree = "<group>";
 		};
 		FA8A5C2020D8CBB92A1D3D7C /* Pods */ = {
@@ -526,6 +553,7 @@
 				C916B9751C1FB94F000E6303 /* main.m in Sources */,
 				C916B9CA1C1FB9D9000E6303 /* JoinChatViewController.m in Sources */,
 				C916B9C71C1FB9D9000E6303 /* JBJLoginViewController.m in Sources */,
+				C9701D4E1C28E3F700B86B0B /* NewChatViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

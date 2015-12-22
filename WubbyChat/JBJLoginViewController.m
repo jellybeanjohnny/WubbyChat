@@ -36,11 +36,14 @@
   }];
 }
 
+
 - (IBAction)_loginWithFacebook:(id)sender
 {
   NSArray<NSString *> *permissions = @[@"public_profile", @"user_friends"];
   
   [PFFacebookUtils logInInBackgroundWithReadPermissions:permissions block:^(PFUser * _Nullable user, NSError * _Nullable error) {
+   
+    
     if (!user) {
       NSLog(@"User cancelled Facebook login");
     }

@@ -49,11 +49,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BvP-lg-08H">
                                 <rect key="frame" x="230" y="277" width="141" height="30"/>
                                 <state key="normal" title="Login with Facebook"/>
-                                <connections>
-                                    <action selector="_loginWithFacebook:" destination="7Vs-60-2fy" eventType="touchUpInside" id="szU-xT-ubC"/>
-                                </connections>
                             </button>
                         </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="mSp-fr-xtF" firstAttribute="top" secondItem="5cN-lR-omm" secondAttribute="bottom" constant="8" id="3wL-Oi-btd"/>
                             <constraint firstItem="5cN-lR-omm" firstAttribute="centerX" secondItem="7vR-Lo-eht" secondAttribute="centerX" id="4IQ-Il-m26"/>

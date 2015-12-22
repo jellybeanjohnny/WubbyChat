@@ -19,7 +19,7 @@
                 <viewControllerPlaceholder storyboardName="NewChat" id="u6e-cN-DNd" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jdx-R0-2TO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1341" y="1"/>
+            <point key="canvasLocation" x="1486" y="-14"/>
         </scene>
         <!--Dev Options View Controller-->
         <scene sceneID="Yty-AO-Dbn">
@@ -50,7 +50,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jeS-W9-yJ8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="882" y="-389"/>
+            <point key="canvasLocation" x="894" y="-164"/>
         </scene>
         <!--Chats-->
         <scene sceneID="IV8-xI-noa">
