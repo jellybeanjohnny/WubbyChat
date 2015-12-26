@@ -25,24 +25,28 @@ class NewChatViewController: UIViewController, UICollectionViewDataSource, UICol
   }
   
   //MARK: - Actions
-  
   @IBAction func _cancel(sender: AnyObject) {
     
     self.dismissViewControllerAnimated(true, completion: nil);
     
   }
   
+  @IBAction func _removeFriend(sender: AnyObject) {
+    print("friend removed")
+    _members?.removeLast()
+    _membersCollectionView.reloadData()
+  }
+  
   /**
    Presents a friend picker for the user to add friends
    */
-  @IBAction func _addFriends(sender: AnyObject) {
+  @IBAction func _addFriend(sender: AnyObject) {
     print("Add button pressed")
     _members?.append(1)
     _membersCollectionView.reloadData()
   }
   
   //MARK: UICollectionView
-  
   func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
     return (_members?.count)! + 1
   }
@@ -70,9 +74,7 @@ class NewChatViewController: UIViewController, UICollectionViewDataSource, UICol
     print("item selected")
   }
 
-  @IBAction func _removeFriend(sender: AnyObject) {
-    print("friend removed")
-  }
+
   
   
 
