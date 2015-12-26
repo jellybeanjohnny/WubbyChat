@@ -8,12 +8,15 @@
 
 import UIKit
 
-class NewChatViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class NewChatViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
 
   @IBOutlet weak var _groupNameField: UITextField!
   @IBOutlet weak var _membersCollectionView: UICollectionView!
 
   var _members : Array<Int>?
+  
+  let addButtonCellSize = CGSizeMake(40, 40);
+  let memberCellSize = CGSizeMake(70, 70)
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -59,7 +62,7 @@ class NewChatViewController: UIViewController, UICollectionViewDataSource, UICol
     
     var cellIdentifier: String
     
-    if indexPath.row == (_members?.count)! {
+    if (indexPath.row == (_members?.count)!) {
       cellIdentifier = "addCell"
     } else {
       cellIdentifier = "memberCell"
@@ -70,11 +73,27 @@ class NewChatViewController: UIViewController, UICollectionViewDataSource, UICol
     return cell
   }
   
+  func collectionView(collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionReusableView {
+    let headerIdentifier = "participantsHeader"
+    
+    let cell = collectionView.dequeueReusableSupplementaryViewOfKind(UICollectionElementKindSectionHeader, withReuseIdentifier: headerIdentifier, forIndexPath: indexPath)
+    
+    return cell
+  }
+  
   func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
     print("item selected")
   }
 
+  func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+    if (indexPath.row == _members?.count) {
+      return addButtonCellSize
+    }
+    else {
+      return memberCellSize
+    }
 
+  }
   
   
 
