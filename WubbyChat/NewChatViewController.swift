@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NewChatViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+class NewChatViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UITextFieldDelegate {
 
   @IBOutlet weak var _groupNameField: UITextField!
   @IBOutlet weak var _membersCollectionView: UICollectionView!
@@ -22,9 +22,12 @@ class NewChatViewController: UIViewController, UICollectionViewDataSource, UICol
     super.viewDidLoad()
     _membersCollectionView.delegate = self
     _membersCollectionView.dataSource = self
+    _groupNameField.delegate = self
     
     // Setting the members array to an empty array
     _members = []
+    
+    _setupGestures()
   }
   
   //MARK: - Actions
@@ -49,7 +52,28 @@ class NewChatViewController: UIViewController, UICollectionViewDataSource, UICol
     _membersCollectionView.reloadData()
   }
   
-  //MARK: UICollectionView
+  /**
+   Lowers the keyboard
+   */
+  func _lowerKeyboard() {
+    if _groupNameField.isFirstResponder() {
+      _groupNameField.resignFirstResponder()
+    }
+  }
+  
+  //MARK: - Gestures
+  func _setupGestures() {
+    let tapGesture = UITapGestureRecognizer.init(target: self, action: "_lowerKeyboard")
+    self.view.addGestureRecognizer(tapGesture)
+  }
+  
+  //MARK: - UITextfieldDelegate
+  func textFieldShouldReturn(textField: UITextField) -> Bool {
+    _lowerKeyboard()
+    return true
+  }
+  
+  //MARK: - UICollectionView
   func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
     return (_members?.count)! + 1
   }
