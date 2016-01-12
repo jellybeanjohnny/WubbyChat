@@ -18,92 +18,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Adw-se-iYY">
+                                <rect key="frame" x="0.0" y="110" width="600" height="490"/>
+                                <connections>
+                                    <segue destination="0fp-R7-2Gf" kind="embed" id="IqZ-k8-eZk"/>
+                                </connections>
+                            </containerView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name this group" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fAu-CC-aVu">
                                 <rect key="frame" x="20" y="72" width="560" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ROO-J4-ezM">
-                                <rect key="frame" x="0.0" y="110" width="600" height="490"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="8" minimumInteritemSpacing="8" id="wtN-gH-JnC">
-                                    <size key="itemSize" width="70" height="70"/>
-                                    <size key="headerReferenceSize" width="50" height="50"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="8" minY="8" maxX="8" maxY="8"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="memberCell" id="aly-Mb-Kee">
-                                        <rect key="frame" x="8" y="58" width="70" height="70"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ProfilePicture-Test" translatesAutoresizingMaskIntoConstraints="NO" id="uLQ-J0-eUW">
-                                                    <rect key="frame" x="9" y="9" width="53" height="53"/>
-                                                </imageView>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NGo-7c-wTa" userLabel="DeleteButton">
-                                                    <rect key="frame" x="37" y="0.0" width="33" height="33"/>
-                                                    <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <inset key="imageEdgeInsets" minX="12" minY="0.0" maxX="0.0" maxY="12"/>
-                                                    <state key="normal" image="DeleteButton-Round"/>
-                                                    <connections>
-                                                        <action selector="_removeFriend:" destination="Awd-p2-52O" eventType="touchUpInside" id="JmD-bq-cOe"/>
-                                                    </connections>
-                                                </button>
-                                            </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
-                                        <size key="customSize" width="70" height="70"/>
-                                    </collectionViewCell>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="addCell" id="naz-F7-lAG">
-                                        <rect key="frame" x="86" y="73" width="40" height="40"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KUa-dH-yvc" userLabel="AddButton">
-                                                    <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
-                                                    <color key="tintColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <state key="normal" image="AddButton-Round"/>
-                                                    <connections>
-                                                        <action selector="_addFriend:" destination="Awd-p2-52O" eventType="touchUpInside" id="eT3-T7-fZZ"/>
-                                                    </connections>
-                                                </button>
-                                            </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
-                                        <size key="customSize" width="40" height="40"/>
-                                    </collectionViewCell>
-                                </cells>
-                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="participantsHeader" id="cqa-Xx-p0P">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="50"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Group Participants" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eS9-W2-8LD">
-                                            <rect key="frame" x="229" y="14" width="143" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="eS9-W2-8LD" firstAttribute="centerX" secondItem="cqa-Xx-p0P" secondAttribute="centerX" id="F32-dW-czC"/>
-                                        <constraint firstItem="eS9-W2-8LD" firstAttribute="centerY" secondItem="cqa-Xx-p0P" secondAttribute="centerY" id="YC0-7q-Z9a"/>
-                                    </constraints>
-                                </collectionReusableView>
-                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="fAu-CC-aVu" firstAttribute="top" secondItem="2VO-vt-6IM" secondAttribute="bottom" constant="8" id="3TT-RR-kuH"/>
-                            <constraint firstItem="ROO-J4-ezM" firstAttribute="leading" secondItem="tHt-8k-Uol" secondAttribute="leadingMargin" constant="-20" id="5vj-oz-Fc4"/>
-                            <constraint firstItem="Gio-lD-09i" firstAttribute="top" secondItem="ROO-J4-ezM" secondAttribute="bottom" id="Lid-SI-lJE"/>
+                            <constraint firstItem="Adw-se-iYY" firstAttribute="top" secondItem="fAu-CC-aVu" secondAttribute="bottom" constant="8" id="6er-sm-jRK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Adw-se-iYY" secondAttribute="trailing" constant="-20" id="BhX-fz-9bf"/>
+                            <constraint firstItem="Gio-lD-09i" firstAttribute="top" secondItem="Adw-se-iYY" secondAttribute="bottom" id="Ms7-zo-DNO"/>
                             <constraint firstAttribute="leadingMargin" secondItem="fAu-CC-aVu" secondAttribute="leading" id="NsG-EA-DWM"/>
-                            <constraint firstItem="ROO-J4-ezM" firstAttribute="top" secondItem="fAu-CC-aVu" secondAttribute="bottom" constant="8" id="hWg-zX-NT5"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="ROO-J4-ezM" secondAttribute="trailing" constant="-20" id="rb0-Gx-86a"/>
+                            <constraint firstItem="Adw-se-iYY" firstAttribute="leading" secondItem="tHt-8k-Uol" secondAttribute="leadingMargin" constant="-20" id="YO0-Au-WIL"/>
                             <constraint firstAttribute="trailingMargin" secondItem="fAu-CC-aVu" secondAttribute="trailing" id="tIO-td-NoO"/>
                         </constraints>
                     </view>
@@ -117,12 +51,69 @@
                     </navigationItem>
                     <connections>
                         <outlet property="_groupNameField" destination="fAu-CC-aVu" id="VWF-HH-4l5"/>
-                        <outlet property="_membersCollectionView" destination="ROO-J4-ezM" id="uFi-wf-6UB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nEu-sf-f4A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1203" y="311"/>
+        </scene>
+        <!--Friend Selection Table View Controller-->
+        <scene sceneID="BFa-8R-dD9">
+            <objects>
+                <tableViewController automaticallyAdjustsScrollViewInsets="NO" id="0fp-R7-2Gf" customClass="FriendSelectionTableViewController" customModule="WubbyChat" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="tuB-0E-gHv">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="490"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FriendCell" id="HL3-DC-Cgg" customClass="FriendSelectionTableViewCell" customModule="WubbyChat" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="49.5" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HL3-DC-Cgg" id="TUy-Kf-Byo">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Jellybean Johnny" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ODd-1M-UpR">
+                                            <rect key="frame" x="56" y="11" width="133" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <view userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nq9-yN-f7S" customClass="FillButton" customModule="WubbyChat" customModuleProvider="target">
+                                            <rect key="frame" x="8" y="-1" width="40" height="43"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="circleSize">
+                                                    <real key="value" value="20"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isFilled" value="NO"/>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="springBounce">
+                                                    <real key="value" value="20"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="springSpeed">
+                                                    <real key="value" value="20"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="bounceScale">
+                                                    <real key="value" value="0.5"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="nameLabel" destination="ODd-1M-UpR" id="nZ5-Go-Hhx"/>
+                                    <outlet property="selectionButton" destination="nq9-yN-f7S" id="Wem-bw-eZc"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="0fp-R7-2Gf" id="YPy-ZQ-Iv4"/>
+                            <outlet property="delegate" destination="0fp-R7-2Gf" id="lZb-K6-VBI"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IKz-gW-vXa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1869" y="311"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="kGe-AF-TUO">
@@ -143,9 +134,4 @@
             <point key="canvasLocation" x="523" y="311"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="AddButton-Round" width="538" height="538"/>
-        <image name="DeleteButton-Round" width="538" height="538"/>
-        <image name="ProfilePicture-Test" width="448" height="448"/>
-    </resources>
 </document>

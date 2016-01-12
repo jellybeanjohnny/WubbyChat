@@ -33,6 +33,9 @@
 		C91A37D81C23A1B700828BC6 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91A37D71C23A1B700828BC6 /* SignUpViewController.swift */; };
 		C93955B51C279B020088B9A6 /* DevOptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93955B41C279B020088B9A6 /* DevOptionsViewController.swift */; };
 		C9701D4E1C28E3F700B86B0B /* NewChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9701D4D1C28E3F700B86B0B /* NewChatViewController.swift */; };
+		C9CB7E601C44A7CC00FC7DCF /* FriendSelectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CB7E5F1C44A7CC00FC7DCF /* FriendSelectionTableViewCell.swift */; };
+		C9CB7E621C44AABE00FC7DCF /* FriendSelectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CB7E611C44AABE00FC7DCF /* FriendSelectionTableViewController.swift */; };
+		C9CB7E641C44B5A800FC7DCF /* FillButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CB7E631C44B5A800FC7DCF /* FillButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +112,9 @@
 		C91A37EB1C23A6B900828BC6 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		C93955B41C279B020088B9A6 /* DevOptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DevOptionsViewController.swift; sourceTree = "<group>"; };
 		C9701D4D1C28E3F700B86B0B /* NewChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewChatViewController.swift; sourceTree = "<group>"; };
+		C9CB7E5F1C44A7CC00FC7DCF /* FriendSelectionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendSelectionTableViewCell.swift; sourceTree = "<group>"; };
+		C9CB7E611C44AABE00FC7DCF /* FriendSelectionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendSelectionTableViewController.swift; sourceTree = "<group>"; };
+		C9CB7E631C44B5A800FC7DCF /* FillButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FillButton.swift; sourceTree = "<group>"; };
 		D5E427C14D03855EEDF062A0 /* Pods-WubbyChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WubbyChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-WubbyChat/Pods-WubbyChat.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -181,11 +187,14 @@
 		C916B9721C1FB94F000E6303 /* WubbyChat */ = {
 			isa = PBXGroup;
 			children = (
+				C93955B61C279BB70088B9A6 /* DevOptions */,
+				C916B9D21C1FBB78000E6303 /* Login & Signup */,
+				C916B9D31C1FBB7D000E6303 /* Chat */,
+				C9CB7E5B1C44A44D00FC7DCF /* Custom Controls */,
 				C916B9CD1C1FBAFC000E6303 /* App Delegate */,
 				C916B9D11C1FBB16000E6303 /* Storyboards & Launch Screen */,
 				C916B9CE1C1FBB03000E6303 /* Model */,
 				C916B9CF1C1FBB09000E6303 /* View */,
-				C916B9D01C1FBB0E000E6303 /* Controller */,
 				C916B97F1C1FB94F000E6303 /* Assets.xcassets */,
 				C92011611C1FC17100C1C031 /* Plist */,
 				C916B9731C1FB94F000E6303 /* Supporting Files */,
@@ -255,23 +264,12 @@
 			name = View;
 			sourceTree = "<group>";
 		};
-		C916B9D01C1FBB0E000E6303 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				C916B9D31C1FBB7D000E6303 /* Chat */,
-				C916B9D21C1FBB78000E6303 /* Login & Signup */,
-				C93955B61C279BB70088B9A6 /* DevOptions */,
-			);
-			name = Controller;
-			sourceTree = "<group>";
-		};
 		C916B9D11C1FBB16000E6303 /* Storyboards & Launch Screen */ = {
 			isa = PBXGroup;
 			children = (
 				C916B9D41C1FBC3A000E6303 /* Main.storyboard */,
 				C916B9A91C1FB9D9000E6303 /* Chat.storyboard */,
 				C916B9BE1C1FB9D9000E6303 /* Login.storyboard */,
-				C916B9BF1C1FB9D9000E6303 /* NewChat.storyboard */,
 				C916B9811C1FB94F000E6303 /* LaunchScreen.storyboard */,
 			);
 			name = "Storyboards & Launch Screen";
@@ -292,7 +290,7 @@
 			children = (
 				C9701D4C1C28E39B00B86B0B /* ChatRoom */,
 				C9701D4B1C28E39400B86B0B /* Chat List */,
-				C9701D4A1C28E38B00B86B0B /* New Chat */,
+				C9701D4A1C28E38B00B86B0B /* Creating a New Chat */,
 				C916B9BC1C1FB9D9000E6303 /* JoinChatViewController.h */,
 				C916B9BD1C1FB9D9000E6303 /* JoinChatViewController.m */,
 			);
@@ -316,12 +314,15 @@
 			name = DevOptions;
 			sourceTree = "<group>";
 		};
-		C9701D4A1C28E38B00B86B0B /* New Chat */ = {
+		C9701D4A1C28E38B00B86B0B /* Creating a New Chat */ = {
 			isa = PBXGroup;
 			children = (
+				C916B9BF1C1FB9D9000E6303 /* NewChat.storyboard */,
 				C9701D4D1C28E3F700B86B0B /* NewChatViewController.swift */,
+				C9CB7E5F1C44A7CC00FC7DCF /* FriendSelectionTableViewCell.swift */,
+				C9CB7E611C44AABE00FC7DCF /* FriendSelectionTableViewController.swift */,
 			);
-			name = "New Chat";
+			name = "Creating a New Chat";
 			sourceTree = "<group>";
 		};
 		C9701D4B1C28E39400B86B0B /* Chat List */ = {
@@ -342,6 +343,14 @@
 				C916B9AF1C1FB9D9000E6303 /* ChatViewController.m */,
 			);
 			name = ChatRoom;
+			sourceTree = "<group>";
+		};
+		C9CB7E5B1C44A44D00FC7DCF /* Custom Controls */ = {
+			isa = PBXGroup;
+			children = (
+				C9CB7E631C44B5A800FC7DCF /* FillButton.swift */,
+			);
+			name = "Custom Controls";
 			sourceTree = "<group>";
 		};
 		FA8A5C2020D8CBB92A1D3D7C /* Pods */ = {
@@ -541,6 +550,7 @@
 			files = (
 				C916B9C21C1FB9D9000E6303 /* ChatRoomTableViewController.m in Sources */,
 				C916B9C11C1FB9D9000E6303 /* ChatListViewController.m in Sources */,
+				C9CB7E621C44AABE00FC7DCF /* FriendSelectionTableViewController.swift in Sources */,
 				C916B9C41C1FB9D9000E6303 /* JBJChat.m in Sources */,
 				C916B9C51C1FB9D9000E6303 /* JBJChatTableViewCell.m in Sources */,
 				C901E05F1C1FC4B0005396C5 /* PlistManager.m in Sources */,
@@ -550,6 +560,8 @@
 				C916B9C31C1FB9D9000E6303 /* ChatViewController.m in Sources */,
 				C91A37D81C23A1B700828BC6 /* SignUpViewController.swift in Sources */,
 				C916B9C81C1FB9D9000E6303 /* JBJMessageTableViewCell.m in Sources */,
+				C9CB7E641C44B5A800FC7DCF /* FillButton.swift in Sources */,
+				C9CB7E601C44A7CC00FC7DCF /* FriendSelectionTableViewCell.swift in Sources */,
 				C916B9A81C1FB9B9000E6303 /* AppDelegate.m in Sources */,
 				C916B9751C1FB94F000E6303 /* main.m in Sources */,
 				C916B9CA1C1FB9D9000E6303 /* JoinChatViewController.m in Sources */,
