@@ -22,6 +22,9 @@ import UIKit
 
 class FriendSelectionTableViewController: UITableViewController {
   
+  
+  var selectedFriendIndexRow = [Int]()
+  
   //MARK: - UITableViewController Datasource & Delegate Methods
   
   override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -34,7 +37,14 @@ class FriendSelectionTableViewController: UITableViewController {
   
   override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     
-    let cell = tableView.dequeueReusableCellWithIdentifier("FriendCell") as! FriendSelectionTableViewCell
+    let cell = tableView.dequeueReusableCellWithIdentifier("FriendCell", forIndexPath: indexPath) as! FriendSelectionTableViewCell
+    
+    if (selectedFriendIndexRow.contains(indexPath.row)) {
+      cell.selectionButton.isFilled = true
+    }
+    else {
+      cell.selectionButton.isFilled = false
+    }
     
     return cell
   }
@@ -42,8 +52,15 @@ class FriendSelectionTableViewController: UITableViewController {
   override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
     let cell = tableView.cellForRowAtIndexPath(indexPath) as! FriendSelectionTableViewCell
     cell.selectionButton.isFilled = !cell.selectionButton.isFilled
+    cell.selectionButton.bounce()
+    
+    if (selectedFriendIndexRow.contains(indexPath.row)) {
+      // Find index for this object and remove it
+      selectedFriendIndexRow.removeAtIndex(selectedFriendIndexRow.indexOf(indexPath.row)!)
+    }
+    else {
+      // Selected friends array does not contain this object so we will add it
+      selectedFriendIndexRow.append(indexPath.row)
+    }
   }
-
-
-
 }

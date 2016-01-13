@@ -70,7 +70,6 @@ import UIKit
   @IBInspectable var isFilled : Bool = false {
     didSet {
       _updateLayoutProperties()
-      _bounce()
     }
   }
   
@@ -82,7 +81,7 @@ import UIKit
   
   
   //MARK: - Animations
-  private func _bounce() {
+  func bounce() {
     if let bounceAnim = pop_animationForKey("Bounce") as? POPSpringAnimation {
       bounceAnim.fromValue = NSValue.init(CGPoint: CGPointMake(bounceScale, bounceScale))
       bounceAnim.toValue = NSValue.init(CGPoint: CGPointMake(1, 1))
