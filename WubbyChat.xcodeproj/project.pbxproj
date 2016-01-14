@@ -187,14 +187,15 @@
 		C916B9721C1FB94F000E6303 /* WubbyChat */ = {
 			isa = PBXGroup;
 			children = (
+				C95B1CB71C4745F800DA8F5D /* Constants */,
+				C95B1CB61C4745EA00DA8F5D /* Plist */,
+				C95B1CB51C4745E200DA8F5D /* Pubnub */,
 				C93955B61C279BB70088B9A6 /* DevOptions */,
 				C916B9D21C1FBB78000E6303 /* Login & Signup */,
 				C916B9D31C1FBB7D000E6303 /* Chat */,
 				C9CB7E5B1C44A44D00FC7DCF /* Custom Controls */,
 				C916B9CD1C1FBAFC000E6303 /* App Delegate */,
-				C916B9D11C1FBB16000E6303 /* Storyboards & Launch Screen */,
-				C916B9CE1C1FBB03000E6303 /* Model */,
-				C916B9CF1C1FBB09000E6303 /* View */,
+				C916B9D11C1FBB16000E6303 /* Launch Screen */,
 				C916B97F1C1FB94F000E6303 /* Assets.xcassets */,
 				C92011611C1FC17100C1C031 /* Plist */,
 				C916B9731C1FB94F000E6303 /* Supporting Files */,
@@ -238,46 +239,18 @@
 			name = "App Delegate";
 			sourceTree = "<group>";
 		};
-		C916B9CE1C1FBB03000E6303 /* Model */ = {
+		C916B9D11C1FBB16000E6303 /* Launch Screen */ = {
 			isa = PBXGroup;
 			children = (
-				C916B9B01C1FB9D9000E6303 /* JBJChat.h */,
-				C916B9B11C1FB9D9000E6303 /* JBJChat.m */,
-				C916B9B41C1FB9D9000E6303 /* JBJConstants.h */,
-				C916B9B51C1FB9D9000E6303 /* JBJConstants.m */,
-				C916B9BA1C1FB9D9000E6303 /* JBJPubNubConnectionManager.h */,
-				C916B9BB1C1FB9D9000E6303 /* JBJPubNubConnectionManager.m */,
-				C901E05D1C1FC475005396C5 /* PlistManager.h */,
-				C901E05E1C1FC4B0005396C5 /* PlistManager.m */,
-			);
-			name = Model;
-			sourceTree = "<group>";
-		};
-		C916B9CF1C1FBB09000E6303 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				C916B9B21C1FB9D9000E6303 /* JBJChatTableViewCell.h */,
-				C916B9B31C1FB9D9000E6303 /* JBJChatTableViewCell.m */,
-				C916B9B81C1FB9D9000E6303 /* JBJMessageTableViewCell.h */,
-				C916B9B91C1FB9D9000E6303 /* JBJMessageTableViewCell.m */,
-			);
-			name = View;
-			sourceTree = "<group>";
-		};
-		C916B9D11C1FBB16000E6303 /* Storyboards & Launch Screen */ = {
-			isa = PBXGroup;
-			children = (
-				C916B9D41C1FBC3A000E6303 /* Main.storyboard */,
-				C916B9A91C1FB9D9000E6303 /* Chat.storyboard */,
-				C916B9BE1C1FB9D9000E6303 /* Login.storyboard */,
 				C916B9811C1FB94F000E6303 /* LaunchScreen.storyboard */,
 			);
-			name = "Storyboards & Launch Screen";
+			name = "Launch Screen";
 			sourceTree = "<group>";
 		};
 		C916B9D21C1FBB78000E6303 /* Login & Signup */ = {
 			isa = PBXGroup;
 			children = (
+				C916B9BE1C1FB9D9000E6303 /* Login.storyboard */,
 				C916B9B61C1FB9D9000E6303 /* JBJLoginViewController.h */,
 				C916B9B71C1FB9D9000E6303 /* JBJLoginViewController.m */,
 				C91A37D71C23A1B700828BC6 /* SignUpViewController.swift */,
@@ -288,6 +261,7 @@
 		C916B9D31C1FBB7D000E6303 /* Chat */ = {
 			isa = PBXGroup;
 			children = (
+				C95B1CB41C4745A400DA8F5D /* Chat Model */,
 				C9701D4C1C28E39B00B86B0B /* ChatRoom */,
 				C9701D4B1C28E39400B86B0B /* Chat List */,
 				C9701D4A1C28E38B00B86B0B /* Creating a New Chat */,
@@ -314,6 +288,42 @@
 			name = DevOptions;
 			sourceTree = "<group>";
 		};
+		C95B1CB41C4745A400DA8F5D /* Chat Model */ = {
+			isa = PBXGroup;
+			children = (
+				C916B9B01C1FB9D9000E6303 /* JBJChat.h */,
+				C916B9B11C1FB9D9000E6303 /* JBJChat.m */,
+			);
+			name = "Chat Model";
+			sourceTree = "<group>";
+		};
+		C95B1CB51C4745E200DA8F5D /* Pubnub */ = {
+			isa = PBXGroup;
+			children = (
+				C916B9BA1C1FB9D9000E6303 /* JBJPubNubConnectionManager.h */,
+				C916B9BB1C1FB9D9000E6303 /* JBJPubNubConnectionManager.m */,
+			);
+			name = Pubnub;
+			sourceTree = "<group>";
+		};
+		C95B1CB61C4745EA00DA8F5D /* Plist */ = {
+			isa = PBXGroup;
+			children = (
+				C901E05D1C1FC475005396C5 /* PlistManager.h */,
+				C901E05E1C1FC4B0005396C5 /* PlistManager.m */,
+			);
+			name = Plist;
+			sourceTree = "<group>";
+		};
+		C95B1CB71C4745F800DA8F5D /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				C916B9B41C1FB9D9000E6303 /* JBJConstants.h */,
+				C916B9B51C1FB9D9000E6303 /* JBJConstants.m */,
+			);
+			name = Constants;
+			sourceTree = "<group>";
+		};
 		C9701D4A1C28E38B00B86B0B /* Creating a New Chat */ = {
 			isa = PBXGroup;
 			children = (
@@ -328,6 +338,7 @@
 		C9701D4B1C28E39400B86B0B /* Chat List */ = {
 			isa = PBXGroup;
 			children = (
+				C916B9D41C1FBC3A000E6303 /* Main.storyboard */,
 				C916B9AA1C1FB9D9000E6303 /* ChatListViewController.h */,
 				C916B9AB1C1FB9D9000E6303 /* ChatListViewController.m */,
 			);
@@ -337,6 +348,11 @@
 		C9701D4C1C28E39B00B86B0B /* ChatRoom */ = {
 			isa = PBXGroup;
 			children = (
+				C916B9B21C1FB9D9000E6303 /* JBJChatTableViewCell.h */,
+				C916B9B31C1FB9D9000E6303 /* JBJChatTableViewCell.m */,
+				C916B9B81C1FB9D9000E6303 /* JBJMessageTableViewCell.h */,
+				C916B9B91C1FB9D9000E6303 /* JBJMessageTableViewCell.m */,
+				C916B9A91C1FB9D9000E6303 /* Chat.storyboard */,
 				C916B9AC1C1FB9D9000E6303 /* ChatRoomTableViewController.h */,
 				C916B9AD1C1FB9D9000E6303 /* ChatRoomTableViewController.m */,
 				C916B9AE1C1FB9D9000E6303 /* ChatViewController.h */,

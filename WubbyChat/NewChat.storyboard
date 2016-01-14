@@ -18,26 +18,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Adw-se-iYY">
-                                <rect key="frame" x="0.0" y="110" width="600" height="490"/>
-                                <connections>
-                                    <segue destination="0fp-R7-2Gf" kind="embed" id="IqZ-k8-eZk"/>
-                                </connections>
-                            </containerView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name this group" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fAu-CC-aVu">
                                 <rect key="frame" x="20" y="72" width="560" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Adw-se-iYY">
+                                <rect key="frame" x="10" y="110" width="579" height="482"/>
+                                <connections>
+                                    <segue destination="0fp-R7-2Gf" kind="embed" id="IqZ-k8-eZk"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="fAu-CC-aVu" firstAttribute="top" secondItem="2VO-vt-6IM" secondAttribute="bottom" constant="8" id="3TT-RR-kuH"/>
                             <constraint firstItem="Adw-se-iYY" firstAttribute="top" secondItem="fAu-CC-aVu" secondAttribute="bottom" constant="8" id="6er-sm-jRK"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Adw-se-iYY" secondAttribute="trailing" constant="-20" id="BhX-fz-9bf"/>
-                            <constraint firstItem="Gio-lD-09i" firstAttribute="top" secondItem="Adw-se-iYY" secondAttribute="bottom" id="Ms7-zo-DNO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Adw-se-iYY" secondAttribute="trailing" constant="-9" id="BhX-fz-9bf"/>
+                            <constraint firstItem="Gio-lD-09i" firstAttribute="top" secondItem="Adw-se-iYY" secondAttribute="bottom" constant="8" id="Ms7-zo-DNO"/>
                             <constraint firstAttribute="leadingMargin" secondItem="fAu-CC-aVu" secondAttribute="leading" id="NsG-EA-DWM"/>
-                            <constraint firstItem="Adw-se-iYY" firstAttribute="leading" secondItem="tHt-8k-Uol" secondAttribute="leadingMargin" constant="-20" id="YO0-Au-WIL"/>
+                            <constraint firstItem="Adw-se-iYY" firstAttribute="leading" secondItem="tHt-8k-Uol" secondAttribute="leadingMargin" constant="-10" id="YO0-Au-WIL"/>
                             <constraint firstAttribute="trailingMargin" secondItem="fAu-CC-aVu" secondAttribute="trailing" id="tIO-td-NoO"/>
                         </constraints>
                     </view>
@@ -47,7 +47,11 @@
                                 <action selector="_cancel:" destination="Awd-p2-52O" id="NoA-zR-dI8"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="done" id="uzI-kE-Xna"/>
+                        <barButtonItem key="rightBarButtonItem" title="Create" style="done" id="uzI-kE-Xna">
+                            <connections>
+                                <action selector="_createButtonPressed:" destination="Awd-p2-52O" id="1dj-v0-U0H"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="_groupNameField" destination="fAu-CC-aVu" id="VWF-HH-4l5"/>
@@ -62,23 +66,17 @@
             <objects>
                 <tableViewController automaticallyAdjustsScrollViewInsets="NO" id="0fp-R7-2Gf" customClass="FriendSelectionTableViewController" customModule="WubbyChat" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="tuB-0E-gHv">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="490"/>
+                        <rect key="frame" x="0.0" y="0.0" width="579" height="482"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FriendCell" id="HL3-DC-Cgg" customClass="FriendSelectionTableViewCell" customModule="WubbyChat" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="49.5" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="49.5" width="579" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HL3-DC-Cgg" id="TUy-Kf-Byo">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="579" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Jellybean Johnny" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ODd-1M-UpR">
-                                            <rect key="frame" x="56" y="11" width="133" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <view userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nq9-yN-f7S" customClass="FillButton" customModule="WubbyChat" customModuleProvider="target">
                                             <rect key="frame" x="8" y="-1" width="40" height="43"/>
                                             <userDefinedRuntimeAttributes>
@@ -97,6 +95,12 @@
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                         </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Jellybean Johnny" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ODd-1M-UpR">
+                                            <rect key="frame" x="56" y="11" width="133" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
