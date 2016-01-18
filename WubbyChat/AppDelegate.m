@@ -12,6 +12,7 @@
 #import "JBJPubNubConnectionManager.h"
 #import "JBJChat.h"
 #import "PlistManager.h"
+#import "WubbyChat-Swift.h"
 
 // Facebook Integration
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
@@ -28,6 +29,9 @@
   
   // Setting up JBJChat as an custom subclass of PFObject
   [JBJChat registerSubclass];
+  [TestUser registerSubclass];
+  
+  
 
   // Registration info for Parse
   [Parse setApplicationId:plistDataForKey(@"ParseApplicationIdKey")

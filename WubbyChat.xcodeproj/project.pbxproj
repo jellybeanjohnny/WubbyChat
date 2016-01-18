@@ -32,6 +32,7 @@
 		C916B9D51C1FBC3A000E6303 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C916B9D41C1FBC3A000E6303 /* Main.storyboard */; };
 		C91A37D81C23A1B700828BC6 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91A37D71C23A1B700828BC6 /* SignUpViewController.swift */; };
 		C93955B51C279B020088B9A6 /* DevOptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93955B41C279B020088B9A6 /* DevOptionsViewController.swift */; };
+		C93C8C561C4D8B5700977AEA /* TestUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93C8C551C4D8B5700977AEA /* TestUser.swift */; };
 		C9701D4E1C28E3F700B86B0B /* NewChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9701D4D1C28E3F700B86B0B /* NewChatViewController.swift */; };
 		C9CB7E601C44A7CC00FC7DCF /* FriendSelectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CB7E5F1C44A7CC00FC7DCF /* FriendSelectionTableViewCell.swift */; };
 		C9CB7E621C44AABE00FC7DCF /* FriendSelectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CB7E611C44AABE00FC7DCF /* FriendSelectionTableViewController.swift */; };
@@ -111,6 +112,7 @@
 		C91A37E91C23A6AD00828BC6 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		C91A37EB1C23A6B900828BC6 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		C93955B41C279B020088B9A6 /* DevOptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DevOptionsViewController.swift; sourceTree = "<group>"; };
+		C93C8C551C4D8B5700977AEA /* TestUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestUser.swift; sourceTree = "<group>"; };
 		C9701D4D1C28E3F700B86B0B /* NewChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewChatViewController.swift; sourceTree = "<group>"; };
 		C9CB7E5F1C44A7CC00FC7DCF /* FriendSelectionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendSelectionTableViewCell.swift; sourceTree = "<group>"; };
 		C9CB7E611C44AABE00FC7DCF /* FriendSelectionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendSelectionTableViewController.swift; sourceTree = "<group>"; };
@@ -293,6 +295,7 @@
 			children = (
 				C916B9B01C1FB9D9000E6303 /* JBJChat.h */,
 				C916B9B11C1FB9D9000E6303 /* JBJChat.m */,
+				C93C8C551C4D8B5700977AEA /* TestUser.swift */,
 			);
 			name = "Chat Model";
 			sourceTree = "<group>";
@@ -572,6 +575,7 @@
 				C901E05F1C1FC4B0005396C5 /* PlistManager.m in Sources */,
 				C93955B51C279B020088B9A6 /* DevOptionsViewController.swift in Sources */,
 				C916B9C61C1FB9D9000E6303 /* JBJConstants.m in Sources */,
+				C93C8C561C4D8B5700977AEA /* TestUser.swift in Sources */,
 				C916B9C91C1FB9D9000E6303 /* JBJPubNubConnectionManager.m in Sources */,
 				C916B9C31C1FB9D9000E6303 /* ChatViewController.m in Sources */,
 				C91A37D81C23A1B700828BC6 /* SignUpViewController.swift in Sources */,
@@ -719,6 +723,8 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEFINES_MODULE = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = WubbyChat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Wubbyland.WubbyChat;
@@ -737,6 +743,8 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEFINES_MODULE = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = WubbyChat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Wubbyland.WubbyChat;

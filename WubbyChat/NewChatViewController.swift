@@ -23,6 +23,8 @@ class NewChatViewController: UIViewController, UITextFieldDelegate {
 
   @IBOutlet weak var _groupNameField: UITextField!
   
+  private var _friendSelectionTableViewController : FriendSelectionTableViewController?
+  
   override func viewDidLoad() {
     super.viewDidLoad()
 
@@ -58,21 +60,25 @@ class NewChatViewController: UIViewController, UITextFieldDelegate {
   }
   
   @IBAction func _createButtonPressed(sender: AnyObject) {
-    
     _createChatParseObject { (succeeded) -> Void in
       if (succeeded) {
-        self._presentChat()
+        self.dismissViewControllerAnimated(true, completion: nil)
       }
     }
   }
   
   // Create a JBJChat object and save to parse
   private func _createChatParseObject(completion:(succeeded : Bool) -> Void) {
-    
+    print(_friendSelectionTableViewController?.selectedFriendIndexRow.count)
+    completion(succeeded: true)
   }
   
-  private func _presentChat() {
-    
+  //MARK: - Segue
+  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    if segue.identifier == "EmbedFriendSelectionTableViewController" {
+      // Grab a reference to the FriendSelectionTableViewController
+      _friendSelectionTableViewController = segue.destinationViewController as? FriendSelectionTableViewController
+    }
   }
   
 

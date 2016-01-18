@@ -24,6 +24,23 @@ class FriendSelectionTableViewController: UITableViewController {
   
   
   var selectedFriendIndexRow = [Int]()
+  var selectedFriends = [TestUser]()
+  private var _testUserQueryResults = [TestUser]()
+  
+  //MARK: Parse Query
+  private func _queryForTestUserFriends() {
+    let query = TestUser.query()
+    query?.findObjectsInBackgroundWithBlock({ (testUsers: [PFObject]?, error: NSError?) -> Void in
+      if error  == nil {
+        // Sucessfully found objects
+        self._testUserQueryResults = testUsers as! [TestUser]
+        self.tableView.reloadData()
+      } else {
+        // Error finding objects
+        print("Error: \(error!) \(error!.userInfo)")
+      }
+    })
+  }
   
   //MARK: - UITableViewController Datasource & Delegate Methods
   
@@ -32,35 +49,69 @@ class FriendSelectionTableViewController: UITableViewController {
   }
 
   override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 50
+    return _testUserQueryResults.count
   }
   
   override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     
     let cell = tableView.dequeueReusableCellWithIdentifier("FriendCell", forIndexPath: indexPath) as! FriendSelectionTableViewCell
     
-    if (selectedFriendIndexRow.contains(indexPath.row)) {
-      cell.selectionButton.isFilled = true
-    }
-    else {
-      cell.selectionButton.isFilled = false
-    }
+    _configureCell(cell, atIndexPath: indexPath)
+    
+    _setSelectionButtonStateForCell(cell, row: indexPath.row)
     
     return cell
   }
   
   override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
     let cell = tableView.cellForRowAtIndexPath(indexPath) as! FriendSelectionTableViewCell
+    _toggleSelectionButtonForCell(cell)
+    _toggleSelectedFriendForIndexPathRow(indexPath.row)
+  }
+  
+  
+  //MARK: Selection Button
+  private func _toggleSelectionButtonForCell(cell : FriendSelectionTableViewCell) {
     cell.selectionButton.isFilled = !cell.selectionButton.isFilled
     cell.selectionButton.bounce()
-    
-    if (selectedFriendIndexRow.contains(indexPath.row)) {
-      // Find index for this object and remove it
-      selectedFriendIndexRow.removeAtIndex(selectedFriendIndexRow.indexOf(indexPath.row)!)
-    }
-    else {
-      // Selected friends array does not contain this object so we will add it
-      selectedFriendIndexRow.append(indexPath.row)
+  }
+  
+  private func _setSelectionButtonStateForCell(cell : FriendSelectionTableViewCell, row : Int) {
+    if selectedFriends.contains(_testUserQueryResults[row]) {
+      cell.selectionButton.isFilled = true
+    } else {
+      cell.selectionButton.isFilled = false
     }
   }
+  
+  //MARK: Adding/Removing Users
+  private func _toggleSelectedFriendForIndexPathRow(row : Int) {
+    if selectedFriends.contains(_testUserQueryResults[row]) {
+      if let indexToRemove = selectedFriends.indexOf(_testUserQueryResults[row]) {
+        selectedFriends.removeAtIndex(indexToRemove)
+      }
+    } else {
+      selectedFriends.append(_testUserQueryResults[row])
+    }
+  }
+  
+  //MARK: Cell Configuration
+  private func _configureCell(cell: FriendSelectionTableViewCell, atIndexPath indexPath: NSIndexPath) {
+    // TestUser Object for this index
+    let user = _testUserQueryResults[indexPath.row]
+    
+    cell.nameLabel.text = user.displayName
+  }
+  
+  
+  override func viewDidLoad() {
+    _queryForTestUserFriends()
+  }
+  
 }
+
+
+
+
+
+
