@@ -27,7 +27,7 @@ class FriendSelectionTableViewController: UITableViewController {
   var selectedFriends = [TestUser]()
   private var _testUserQueryResults = [TestUser]()
   
-  //MARK: Parse Query
+  //MARK: - Parse Query
   private func _queryForTestUserFriends() {
     let query = TestUser.query()
     query?.findObjectsInBackgroundWithBlock({ (testUsers: [PFObject]?, error: NSError?) -> Void in
@@ -70,12 +70,18 @@ class FriendSelectionTableViewController: UITableViewController {
   }
   
   
-  //MARK: Selection Button
+  //MARK: - Selection Button
+  /**
+   Toggles the selection button and performs a bounce animation.
+  */
   private func _toggleSelectionButtonForCell(cell : FriendSelectionTableViewCell) {
     cell.selectionButton.isFilled = !cell.selectionButton.isFilled
     cell.selectionButton.bounce()
   }
-  
+
+  /**
+   Sets the selection button to either its filled or unfilled state. This is used to configure reusable cells in the tableView:cellForRowAtIndexPath method
+  */
   private func _setSelectionButtonStateForCell(cell : FriendSelectionTableViewCell, row : Int) {
     if selectedFriends.contains(_testUserQueryResults[row]) {
       cell.selectionButton.isFilled = true
@@ -84,7 +90,7 @@ class FriendSelectionTableViewController: UITableViewController {
     }
   }
   
-  //MARK: Adding/Removing Users
+  //MARK: - Adding/Removing Users
   private func _toggleSelectedFriendForIndexPathRow(row : Int) {
     if selectedFriends.contains(_testUserQueryResults[row]) {
       if let indexToRemove = selectedFriends.indexOf(_testUserQueryResults[row]) {
@@ -95,7 +101,7 @@ class FriendSelectionTableViewController: UITableViewController {
     }
   }
   
-  //MARK: Cell Configuration
+  //MARK: - Cell Configuration
   private func _configureCell(cell: FriendSelectionTableViewCell, atIndexPath indexPath: NSIndexPath) {
     // TestUser Object for this index
     let user = _testUserQueryResults[indexPath.row]
