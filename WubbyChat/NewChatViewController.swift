@@ -19,6 +19,7 @@
 
 import UIKit
 
+
 class NewChatViewController: UIViewController, UITextFieldDelegate {
 
   @IBOutlet weak var _groupNameField: UITextField!
@@ -70,6 +71,11 @@ class NewChatViewController: UIViewController, UITextFieldDelegate {
   // Create a JBJChat object and save to parse
   private func _createChatParseObject(completion:(succeeded : Bool) -> Void) {
     print(_friendSelectionTableViewController?.selectedFriendIndexRow.count)
+    
+    //TODO: Create a new chat and configure it with the relevant information
+    let newchat = JBJChat.object()
+    newchat.chatName = _groupNameField.text
+    
     completion(succeeded: true)
   }
   

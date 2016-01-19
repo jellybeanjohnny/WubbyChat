@@ -5,3 +5,5 @@
 #import <Parse/Parse.h>
 #import <POP/POP.h>
 #import <Parse/PFObject+Subclass.h>
+#import <ParseUI/ParseUI.h>
+#import "JBJChat.h"

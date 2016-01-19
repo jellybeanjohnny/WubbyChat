@@ -24,7 +24,7 @@
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Adw-se-iYY">
-                                <rect key="frame" x="10" y="110" width="579" height="482"/>
+                                <rect key="frame" x="0.0" y="110" width="600" height="490"/>
                                 <connections>
                                     <segue destination="0fp-R7-2Gf" kind="embed" identifier="EmbedFriendSelectionTableViewController" id="IqZ-k8-eZk"/>
                                 </connections>
@@ -34,10 +34,10 @@
                         <constraints>
                             <constraint firstItem="fAu-CC-aVu" firstAttribute="top" secondItem="2VO-vt-6IM" secondAttribute="bottom" constant="8" id="3TT-RR-kuH"/>
                             <constraint firstItem="Adw-se-iYY" firstAttribute="top" secondItem="fAu-CC-aVu" secondAttribute="bottom" constant="8" id="6er-sm-jRK"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Adw-se-iYY" secondAttribute="trailing" constant="-9" id="BhX-fz-9bf"/>
-                            <constraint firstItem="Gio-lD-09i" firstAttribute="top" secondItem="Adw-se-iYY" secondAttribute="bottom" constant="8" id="Ms7-zo-DNO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Adw-se-iYY" secondAttribute="trailing" constant="-20" id="BhX-fz-9bf"/>
+                            <constraint firstItem="Gio-lD-09i" firstAttribute="top" secondItem="Adw-se-iYY" secondAttribute="bottom" id="Ms7-zo-DNO"/>
                             <constraint firstAttribute="leadingMargin" secondItem="fAu-CC-aVu" secondAttribute="leading" id="NsG-EA-DWM"/>
-                            <constraint firstItem="Adw-se-iYY" firstAttribute="leading" secondItem="tHt-8k-Uol" secondAttribute="leadingMargin" constant="-10" id="YO0-Au-WIL"/>
+                            <constraint firstItem="Adw-se-iYY" firstAttribute="leading" secondItem="tHt-8k-Uol" secondAttribute="leadingMargin" constant="-20" id="YO0-Au-WIL"/>
                             <constraint firstAttribute="trailingMargin" secondItem="fAu-CC-aVu" secondAttribute="trailing" id="tIO-td-NoO"/>
                         </constraints>
                     </view>
@@ -65,25 +65,25 @@
         <scene sceneID="BFa-8R-dD9">
             <objects>
                 <tableViewController automaticallyAdjustsScrollViewInsets="NO" id="0fp-R7-2Gf" customClass="FriendSelectionTableViewController" customModule="WubbyChat" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="tuB-0E-gHv">
-                        <rect key="frame" x="0.0" y="0.0" width="579" height="482"/>
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="28" sectionFooterHeight="28" id="tuB-0E-gHv">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="490"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FriendCell" id="HL3-DC-Cgg" customClass="FriendSelectionTableViewCell" customModule="WubbyChat" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="49.5" width="579" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="600" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HL3-DC-Cgg" id="TUy-Kf-Byo">
-                                    <rect key="frame" x="0.0" y="0.0" width="579" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="69.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <view userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nq9-yN-f7S" customClass="FillButton" customModule="WubbyChat" customModuleProvider="target">
-                                            <rect key="frame" x="8" y="-1" width="40" height="43"/>
+                                        <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nq9-yN-f7S" customClass="FillButton" customModule="WubbyChat" customModuleProvider="target">
+                                            <rect key="frame" x="8" y="15" width="38" height="41"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="circleSize">
                                                     <real key="value" value="20"/>
                                                 </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isFilled" value="NO"/>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isFilled" value="YES"/>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="springBounce">
                                                     <real key="value" value="20"/>
                                                 </userDefinedRuntimeAttribute>
@@ -95,16 +95,35 @@
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                         </view>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Jellybean Johnny" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ODd-1M-UpR">
-                                            <rect key="frame" x="56" y="11" width="515" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jellybean Johnny" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ODd-1M-UpR">
+                                            <rect key="frame" x="124" y="25" width="133" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ziv-YA-jFZ" customClass="PFImageView">
+                                            <rect key="frame" x="54" y="4" width="62" height="62"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="62" id="dPr-Rr-hMa"/>
+                                            </constraints>
+                                        </imageView>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="ziv-YA-jFZ" firstAttribute="leading" secondItem="TUy-Kf-Byo" secondAttribute="leading" constant="54" id="BAN-gl-BGP"/>
+                                        <constraint firstItem="ziv-YA-jFZ" firstAttribute="centerY" secondItem="nq9-yN-f7S" secondAttribute="centerY" id="Dh6-cc-nm2"/>
+                                        <constraint firstItem="ziv-YA-jFZ" firstAttribute="centerY" secondItem="TUy-Kf-Byo" secondAttribute="centerY" id="FUG-il-ea3"/>
+                                        <constraint firstItem="ziv-YA-jFZ" firstAttribute="leading" secondItem="nq9-yN-f7S" secondAttribute="trailing" constant="8" symbolic="YES" id="Uae-kN-e9U"/>
+                                        <constraint firstItem="nq9-yN-f7S" firstAttribute="top" secondItem="TUy-Kf-Byo" secondAttribute="topMargin" constant="7" id="X0G-4d-j8q"/>
+                                        <constraint firstItem="nq9-yN-f7S" firstAttribute="leading" secondItem="TUy-Kf-Byo" secondAttribute="leading" constant="8" id="eWg-dx-Abl"/>
+                                        <constraint firstItem="ODd-1M-UpR" firstAttribute="leading" secondItem="ziv-YA-jFZ" secondAttribute="trailing" constant="8" symbolic="YES" id="h9z-bD-vCo"/>
+                                        <constraint firstItem="ODd-1M-UpR" firstAttribute="top" secondItem="TUy-Kf-Byo" secondAttribute="topMargin" constant="17" id="m3q-R1-GaX"/>
+                                        <constraint firstItem="ziv-YA-jFZ" firstAttribute="centerY" secondItem="ODd-1M-UpR" secondAttribute="centerY" id="r47-L1-iTl"/>
+                                        <constraint firstItem="ziv-YA-jFZ" firstAttribute="top" secondItem="TUy-Kf-Byo" secondAttribute="topMargin" constant="-4" id="zBx-Cq-6lb"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="nameLabel" destination="ODd-1M-UpR" id="nZ5-Go-Hhx"/>
+                                    <outlet property="profilePicture" destination="ziv-YA-jFZ" id="6aB-oA-WnN"/>
                                     <outlet property="selectionButton" destination="nq9-yN-f7S" id="Wem-bw-eZc"/>
                                 </connections>
                             </tableViewCell>

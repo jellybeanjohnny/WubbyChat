@@ -107,6 +107,8 @@ class FriendSelectionTableViewController: UITableViewController {
     let user = _testUserQueryResults[indexPath.row]
     
     cell.nameLabel.text = user.displayName
+    cell.profilePicture.file = user.profilePicture
+    cell.profilePicture.loadInBackground()
   }
   
   
