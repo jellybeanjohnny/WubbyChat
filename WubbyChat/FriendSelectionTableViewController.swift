@@ -20,12 +20,21 @@
 
 import UIKit
 
+protocol FriendSelectionTableViewDelegate {
+  func tableViewIsScrolling(isScrolling : Bool)
+}
+
+
 class FriendSelectionTableViewController: UITableViewController {
   
+
   
   var selectedFriendIndexRow = [Int]()
   var selectedFriends = [TestUser]()
+  var delegate : FriendSelectionTableViewDelegate?
+  
   private var _testUserQueryResults = [TestUser]()
+  
   
   //MARK: - Parse Query
   private func _queryForTestUserFriends() {
@@ -111,8 +120,19 @@ class FriendSelectionTableViewController: UITableViewController {
     cell.profilePicture.loadInBackground()
   }
   
+  //MARK: Scrolling
+  override func scrollViewDidEndDragging(scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+    print("scrolling ended.")
+    self.delegate?.tableViewIsScrolling(false)
+  }
+  
+  override func scrollViewWillBeginDragging(scrollView: UIScrollView) {
+    print("scrolling began")
+    self.delegate?.tableViewIsScrolling(true)
+  }
   
   override func viewDidLoad() {
+    super.viewDidLoad()
     _queryForTestUserFriends()
   }
   

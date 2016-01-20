@@ -20,7 +20,7 @@
 import UIKit
 
 
-class NewChatViewController: UIViewController, UITextFieldDelegate {
+class NewChatViewController: UIViewController, UITextFieldDelegate, FriendSelectionTableViewDelegate {
 
   @IBOutlet weak var _groupNameField: UITextField!
   
@@ -53,6 +53,7 @@ class NewChatViewController: UIViewController, UITextFieldDelegate {
     tapGesture.cancelsTouchesInView = false
     self.view.addGestureRecognizer(tapGesture)
   }
+
   
   //MARK: - UITextfieldDelegate
   func textFieldShouldReturn(textField: UITextField) -> Bool {
@@ -79,11 +80,19 @@ class NewChatViewController: UIViewController, UITextFieldDelegate {
     completion(succeeded: true)
   }
   
+  //:MARK - FriendSelectionTableViewDelegate Methods
+  func tableViewIsScrolling(isScrolling: Bool) {
+    if (isScrolling) {
+      _lowerKeyboard()
+    }
+  }
+  
   //MARK: - Segue
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     if segue.identifier == "EmbedFriendSelectionTableViewController" {
       // Grab a reference to the FriendSelectionTableViewController
       _friendSelectionTableViewController = segue.destinationViewController as? FriendSelectionTableViewController
+      _friendSelectionTableViewController?.delegate = self
     }
   }
   
