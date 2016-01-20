@@ -34,6 +34,7 @@
 		C93955B51C279B020088B9A6 /* DevOptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93955B41C279B020088B9A6 /* DevOptionsViewController.swift */; };
 		C93C8C561C4D8B5700977AEA /* TestUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93C8C551C4D8B5700977AEA /* TestUser.swift */; };
 		C9701D4E1C28E3F700B86B0B /* NewChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9701D4D1C28E3F700B86B0B /* NewChatViewController.swift */; };
+		C9789A001C4F02F500847D5D /* RoundedCornerImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97899FF1C4F02F500847D5D /* RoundedCornerImageView.swift */; };
 		C9CB7E601C44A7CC00FC7DCF /* FriendSelectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CB7E5F1C44A7CC00FC7DCF /* FriendSelectionTableViewCell.swift */; };
 		C9CB7E621C44AABE00FC7DCF /* FriendSelectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CB7E611C44AABE00FC7DCF /* FriendSelectionTableViewController.swift */; };
 		C9CB7E641C44B5A800FC7DCF /* FillButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CB7E631C44B5A800FC7DCF /* FillButton.swift */; };
@@ -114,6 +115,7 @@
 		C93955B41C279B020088B9A6 /* DevOptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DevOptionsViewController.swift; sourceTree = "<group>"; };
 		C93C8C551C4D8B5700977AEA /* TestUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestUser.swift; sourceTree = "<group>"; };
 		C9701D4D1C28E3F700B86B0B /* NewChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewChatViewController.swift; sourceTree = "<group>"; };
+		C97899FF1C4F02F500847D5D /* RoundedCornerImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedCornerImageView.swift; sourceTree = "<group>"; };
 		C9CB7E5F1C44A7CC00FC7DCF /* FriendSelectionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendSelectionTableViewCell.swift; sourceTree = "<group>"; };
 		C9CB7E611C44AABE00FC7DCF /* FriendSelectionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendSelectionTableViewController.swift; sourceTree = "<group>"; };
 		C9CB7E631C44B5A800FC7DCF /* FillButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FillButton.swift; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 		C916B9721C1FB94F000E6303 /* WubbyChat */ = {
 			isa = PBXGroup;
 			children = (
+				C97899FE1C4F02C000847D5D /* General Custom Views */,
 				C95B1CB71C4745F800DA8F5D /* Constants */,
 				C95B1CB61C4745EA00DA8F5D /* Plist */,
 				C95B1CB51C4745E200DA8F5D /* Pubnub */,
@@ -362,6 +365,14 @@
 				C916B9AF1C1FB9D9000E6303 /* ChatViewController.m */,
 			);
 			name = ChatRoom;
+			sourceTree = "<group>";
+		};
+		C97899FE1C4F02C000847D5D /* General Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				C97899FF1C4F02F500847D5D /* RoundedCornerImageView.swift */,
+			);
+			name = "General Custom Views";
 			sourceTree = "<group>";
 		};
 		C9CB7E5B1C44A44D00FC7DCF /* Custom Controls */ = {
@@ -577,6 +588,7 @@
 				C916B9C61C1FB9D9000E6303 /* JBJConstants.m in Sources */,
 				C93C8C561C4D8B5700977AEA /* TestUser.swift in Sources */,
 				C916B9C91C1FB9D9000E6303 /* JBJPubNubConnectionManager.m in Sources */,
+				C9789A001C4F02F500847D5D /* RoundedCornerImageView.swift in Sources */,
 				C916B9C31C1FB9D9000E6303 /* ChatViewController.m in Sources */,
 				C91A37D81C23A1B700828BC6 /* SignUpViewController.swift in Sources */,
 				C916B9C81C1FB9D9000E6303 /* JBJMessageTableViewCell.m in Sources */,

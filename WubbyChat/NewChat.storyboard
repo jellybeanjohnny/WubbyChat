@@ -74,11 +74,30 @@
                                 <rect key="frame" x="0.0" y="28" width="600" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HL3-DC-Cgg" id="TUy-Kf-Byo">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="69.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="70"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jellybean Johnny" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ODd-1M-UpR">
+                                            <rect key="frame" x="78" y="24" width="133" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ziv-YA-jFZ" customClass="RoundedCornerImageView" customModule="WubbyChat" customModuleProvider="target">
+                                            <rect key="frame" x="8" y="4" width="62" height="62"/>
+                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="62" id="Gxy-2y-6iF"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="circleMode" value="YES"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </imageView>
                                         <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nq9-yN-f7S" customClass="FillButton" customModule="WubbyChat" customModuleProvider="target">
-                                            <rect key="frame" x="8" y="15" width="38" height="41"/>
+                                            <rect key="frame" x="554" y="14" width="38" height="41"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="38" id="wYn-93-Ic3"/>
+                                            </constraints>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="circleSize">
                                                     <real key="value" value="20"/>
@@ -95,35 +114,22 @@
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                         </view>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jellybean Johnny" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ODd-1M-UpR">
-                                            <rect key="frame" x="124" y="25" width="133" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ziv-YA-jFZ" customClass="PFImageView">
-                                            <rect key="frame" x="54" y="4" width="62" height="62"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="62" id="dPr-Rr-hMa"/>
-                                            </constraints>
-                                        </imageView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="ziv-YA-jFZ" firstAttribute="leading" secondItem="TUy-Kf-Byo" secondAttribute="leading" constant="54" id="BAN-gl-BGP"/>
-                                        <constraint firstItem="ziv-YA-jFZ" firstAttribute="centerY" secondItem="nq9-yN-f7S" secondAttribute="centerY" id="Dh6-cc-nm2"/>
-                                        <constraint firstItem="ziv-YA-jFZ" firstAttribute="centerY" secondItem="TUy-Kf-Byo" secondAttribute="centerY" id="FUG-il-ea3"/>
-                                        <constraint firstItem="ziv-YA-jFZ" firstAttribute="leading" secondItem="nq9-yN-f7S" secondAttribute="trailing" constant="8" symbolic="YES" id="Uae-kN-e9U"/>
-                                        <constraint firstItem="nq9-yN-f7S" firstAttribute="top" secondItem="TUy-Kf-Byo" secondAttribute="topMargin" constant="7" id="X0G-4d-j8q"/>
-                                        <constraint firstItem="nq9-yN-f7S" firstAttribute="leading" secondItem="TUy-Kf-Byo" secondAttribute="leading" constant="8" id="eWg-dx-Abl"/>
-                                        <constraint firstItem="ODd-1M-UpR" firstAttribute="leading" secondItem="ziv-YA-jFZ" secondAttribute="trailing" constant="8" symbolic="YES" id="h9z-bD-vCo"/>
-                                        <constraint firstItem="ODd-1M-UpR" firstAttribute="top" secondItem="TUy-Kf-Byo" secondAttribute="topMargin" constant="17" id="m3q-R1-GaX"/>
-                                        <constraint firstItem="ziv-YA-jFZ" firstAttribute="centerY" secondItem="ODd-1M-UpR" secondAttribute="centerY" id="r47-L1-iTl"/>
-                                        <constraint firstItem="ziv-YA-jFZ" firstAttribute="top" secondItem="TUy-Kf-Byo" secondAttribute="topMargin" constant="-4" id="zBx-Cq-6lb"/>
+                                        <constraint firstItem="ziv-YA-jFZ" firstAttribute="leading" secondItem="TUy-Kf-Byo" secondAttribute="leadingMargin" id="3Vi-ji-TYE"/>
+                                        <constraint firstItem="ziv-YA-jFZ" firstAttribute="centerY" secondItem="ODd-1M-UpR" secondAttribute="centerY" id="8Pe-gI-bqB"/>
+                                        <constraint firstItem="ziv-YA-jFZ" firstAttribute="top" secondItem="TUy-Kf-Byo" secondAttribute="topMargin" constant="-4" id="Dmy-et-LZj"/>
+                                        <constraint firstItem="ODd-1M-UpR" firstAttribute="top" secondItem="TUy-Kf-Byo" secondAttribute="topMargin" constant="16" id="Esa-AW-aeB"/>
+                                        <constraint firstItem="ODd-1M-UpR" firstAttribute="centerY" secondItem="nq9-yN-f7S" secondAttribute="centerY" id="OQK-IJ-bSe"/>
+                                        <constraint firstItem="nq9-yN-f7S" firstAttribute="top" secondItem="TUy-Kf-Byo" secondAttribute="topMargin" constant="6" id="OTN-jY-ZHg"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="nq9-yN-f7S" secondAttribute="bottom" constant="6.5" id="ZgZ-mR-Lqh"/>
+                                        <constraint firstItem="ODd-1M-UpR" firstAttribute="leading" secondItem="ziv-YA-jFZ" secondAttribute="trailing" constant="8" symbolic="YES" id="kFK-eq-SCp"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="nq9-yN-f7S" secondAttribute="trailing" id="mU3-DT-Xeb"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="nameLabel" destination="ODd-1M-UpR" id="nZ5-Go-Hhx"/>
-                                    <outlet property="profilePicture" destination="ziv-YA-jFZ" id="6aB-oA-WnN"/>
+                                    <outlet property="profilePicture" destination="ziv-YA-jFZ" id="sOo-R9-Zbn"/>
                                     <outlet property="selectionButton" destination="nq9-yN-f7S" id="Wem-bw-eZc"/>
                                 </connections>
                             </tableViewCell>
@@ -136,7 +142,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IKz-gW-vXa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1868.5" y="311"/>
+            <point key="canvasLocation" x="1868" y="311"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="kGe-AF-TUO">

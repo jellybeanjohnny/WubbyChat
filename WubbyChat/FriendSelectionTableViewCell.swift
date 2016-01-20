@@ -12,7 +12,7 @@ class FriendSelectionTableViewCell: UITableViewCell {
 
   @IBOutlet weak var nameLabel: UILabel!
   @IBOutlet weak var selectionButton: FillButton!
-  @IBOutlet weak var profilePicture: PFImageView!
+  @IBOutlet weak var profilePicture: RoundedCornerImageView!
   
 }
 
