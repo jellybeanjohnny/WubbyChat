@@ -61,6 +61,7 @@ class NewChatViewController: UIViewController, UITextFieldDelegate, FriendSelect
     return true
   }
   
+  //MARK: - Creating a New Chat
   @IBAction func _createButtonPressed(sender: AnyObject) {
     _createChatParseObject { (succeeded) -> Void in
       if (succeeded) {
@@ -71,16 +72,43 @@ class NewChatViewController: UIViewController, UITextFieldDelegate, FriendSelect
   
   // Create a JBJChat object and save to parse
   private func _createChatParseObject(completion:(succeeded : Bool) -> Void) {
-    print(_friendSelectionTableViewController?.selectedFriendIndexRow.count)
     
-    //TODO: Create a new chat and configure it with the relevant information
-    let newchat = JBJChat.object()
-    newchat.chatName = _groupNameField.text
-    
-    completion(succeeded: true)
+    if let selectedFriends = _friendSelectionTableViewController?.selectedFriends {
+      if selectedFriends.isEmpty {
+        // Throw up a message that no one is currently selected
+        _showNoFriendSelectedAlert()
+        completion(succeeded: false)
+      } else {
+        let newchat = JBJChat.object()
+        newchat.chatName = _groupNameField.text
+        _addSelectedFriendsToChat(newchat, selectedFriends: selectedFriends)
+        // save JBJChat to parse, return the appropriate result to the closure
+        
+        completion(succeeded: true)
+      }
+    }
   }
   
-  //:MARK - FriendSelectionTableViewDelegate Methods
+  /**
+   Adds the selected friends that were selected in the tableViewController to the JBJChat object
+  */
+   //TODO: After testing is over replace the [TestUser] with normal [PFUser]
+  private func _addSelectedFriendsToChat(chat : JBJChat, selectedFriends : [TestUser]) {
+    for friend in selectedFriends {
+      //TODO: The participants property is @dynamic, so the getter and setter are not specified until runtime (i think)?
+      // This results in participants being nil at this point in the program, so it will crash when trying to call the addObject() method.
+      // I can either do something like alloc init a new NSMutableArray at the point of use (now), or I will have to figure out another way
+      // to add this functionality to the JBJChat object.
+      chat.participants.addObject(friend)
+    }
+  }
+  
+  private func _showNoFriendSelectedAlert() {
+    //TODO: implement this method
+    print("No friends currently selected!")
+  }
+  
+  //MARK: - FriendSelectionTableViewDelegate Methods
   func tableViewIsScrolling(isScrolling: Bool) {
     if (isScrolling) {
       _lowerKeyboard()

@@ -9,7 +9,9 @@
 #import "JBJChat.h"
 
 @interface JBJChat ()
+{
 
+}
 
 @end
 
